@@ -27,23 +27,21 @@ class SignIn: UIViewController
     @IBAction func connectButton(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         let usersAndPasses = ["Jean":"1234","Phil":"1234","Alex":"1234","Brian":"1234"]
-        let users = String(describing: usersAndPasses.keys)
-        let passes = String(describing: usersAndPasses.values)
+        let users = [String](usersAndPasses.keys)
         
         defaults.setValuesForKeys(usersAndPasses)
         
         if let user = username.text{
             if let pass = password.text{
-                if user.contains(users)  {
-                    
-                    if pass.contains(passes){
+                if users.contains(user) && pass == usersAndPasses[user]{
                         
                         // Connection OK
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
-                        UserDefaults.standard.synchronize()
+                        //                        UserDefaults.standard.synchronize()
                         self.dismiss(animated: true, completion: nil)
                         
-                    }
+                    
+                    
                 }
                 else{
                     //Creating the alert controller
@@ -65,3 +63,4 @@ class SignIn: UIViewController
         }
     }
 }
+
