@@ -12,17 +12,22 @@ class SignIn: UIViewController
 {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
-    //    let users = Users.userData(Users)
     
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dashboard = segue.destination as! Dashboard
+        dashboard.user = username.text!
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     @IBAction func connectButton(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
@@ -37,11 +42,8 @@ class SignIn: UIViewController
                         
                         // Connection OK
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
-                        //                        UserDefaults.standard.synchronize()
                         self.dismiss(animated: true, completion: nil)
-                        
-                    
-                    
+                
                 }
                 else{
                     //Creating the alert controller

@@ -8,7 +8,45 @@
 
 import UIKit
 
-class Dashboard {
+class Dashboard: UIViewController {
+    var time = Timer()
+
+
     
+//    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    var user: String!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Dashboard.dateAndTime), userInfo: nil, repeats: true)
+    
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func dateAndTime(){
+//        let time = DateFormatter()
+        let date = DateFormatter()
+        
+//        time.timeStyle = .long
+        date.dateStyle = .full
+        
+//        timeLabel.text = time.string(from: Date())
+//        timeLabel.center = self.view.center
+//        timeLabel.textAlignment = NSTextAlignment.center
+        dateLabel.text = date.string(from: Date())
+//        dateLabel.center = self.view.center
+        dateLabel.textAlignment = NSTextAlignment.center
+        
+    }
+    
+    func getUser(){
+
+    }
+
 }
+
