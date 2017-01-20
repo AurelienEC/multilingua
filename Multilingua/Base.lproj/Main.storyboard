@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OpQ-7s-CqW">
-                                <rect key="frame" x="130.5" y="97" width="115" height="30"/>
+                                <rect key="frame" x="130" y="97" width="115" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ni2-qv-tGw">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -44,7 +44,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrez votre nom d'utilisateur" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vIk-QR-FXK">
-                                <rect key="frame" x="37.5" y="254" width="300" height="30"/>
+                                <rect key="frame" x="38" y="254" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="6nQ-Tq-TBv"/>
                                 </constraints>
@@ -59,7 +59,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom d'Utilisateur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-zz-gYq">
-                                <rect key="frame" x="37.5" y="225.5" width="300" height="20.5"/>
+                                <rect key="frame" x="38" y="225.5" width="300" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="x6U-Xg-vpD"/>
                                 </constraints>
@@ -82,11 +82,10 @@
                                 </state>
                                 <connections>
                                     <action selector="connectButton:" destination="iJ6-lM-5qP" eventType="touchUpInside" id="nAm-6M-jBh"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="dashboardSegue" id="Fl2-aA-oqx"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.079285178065418016" green="0.51670005788474027" blue="1" alpha="0.53595890410958902" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pLF-zz-gYq" firstAttribute="centerX" secondItem="WLW-mY-oSq" secondAttribute="centerX" id="1aY-Pj-QCG"/>
                             <constraint firstItem="wUe-c2-61T" firstAttribute="leading" secondItem="vIk-QR-FXK" secondAttribute="leading" id="4k0-6k-1lJ"/>
@@ -136,19 +135,19 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyJ-9X-pVH">
-                                <rect key="frame" x="16" y="82" width="343" height="21"/>
+                                <rect key="frame" x="16" y="38" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonjour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NR-nr-hfK">
-                                <rect key="frame" x="16" y="129" width="337" height="21"/>
+                                <rect key="frame" x="16" y="85" width="337" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0s-PS-28f">
-                                <rect key="frame" x="106" y="129" width="42" height="21"/>
+                                <rect key="frame" x="106" y="85" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -178,7 +177,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Jea-6q-URA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Dz-mU-B0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MMZ-OE-pqP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1Pf-s6-JOs">
@@ -190,6 +188,7 @@
                         <segue destination="iJ6-lM-5qP" kind="relationship" relationship="rootViewController" id="G8C-q1-UPq"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Dz-mU-B0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-586.39999999999998" y="37.331334332833585"/>
         </scene>

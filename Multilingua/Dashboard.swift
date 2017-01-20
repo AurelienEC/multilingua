@@ -16,12 +16,12 @@ class Dashboard: UIViewController {
 //    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
-    var user: String!
+    var stringPassed = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Dashboard.dateAndTime), userInfo: nil, repeats: true)
-    
+        userLabel.text = stringPassed
     }
     
     override func didReceiveMemoryWarning() {

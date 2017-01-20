@@ -13,13 +13,6 @@ class SignIn: UIViewController
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
     
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let dashboard = segue.destination as! Dashboard
-        dashboard.user = username.text!
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +23,11 @@ class SignIn: UIViewController
     }
     
     @IBAction func connectButton(_ sender: AnyObject) {
+        
+        let signIn = storyboard?.instantiateViewController(withIdentifier: "dashboard") as! Dashboard
+        signIn.stringPassed = username.text!
+        navigationController?.pushViewController(signIn, animated: true)
+        
         let defaults = UserDefaults.standard
         let usersAndPasses = ["Jean":"1234","Phil":"1234","Alex":"1234","Brian":"1234"]
         let users = [String](usersAndPasses.keys)

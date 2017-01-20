@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window?.backgroundColor = UIColor(red: 20/255, green: 132/255, blue: 255/255, alpha: 1.0) /* Change tint color using custom RGB values copied from respective raster image editor like Photoshop or Pixelmator */
         return true
     }
 
