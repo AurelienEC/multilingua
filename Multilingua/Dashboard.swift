@@ -29,6 +29,7 @@ class Dashboard: UIViewController {
     func date(){
         let date = DateFormatter()
         date.dateStyle = .full
+        dateLabel.text = date.string(from: Date())
         dateLabel.textAlignment = NSTextAlignment.center
     }
 }

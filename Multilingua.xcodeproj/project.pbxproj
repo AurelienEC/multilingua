@@ -18,6 +18,7 @@
 		C5C61D101E2FC489000130BB /* Open_Sans in Resources */ = {isa = PBXBuildFile; fileRef = C5C61D0E1E2FC489000130BB /* Open_Sans */; };
 		C5C61D111E2FC489000130BB /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = C5C61D0F1E2FC489000130BB /* Roboto */; };
 		C5C61D131E2FCA7C000130BB /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D121E2FCA7C000130BB /* SignIn.swift */; };
+		C5C61D1E1E362023000130BB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D1D1E362023000130BB /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,7 @@
 		C5C61D0E1E2FC489000130BB /* Open_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Open_Sans; sourceTree = "<group>"; };
 		C5C61D0F1E2FC489000130BB /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
 		C5C61D121E2FCA7C000130BB /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
-		C5C61D1C1E3615F1000130BB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C5C61D1D1E362023000130BB /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +87,6 @@
 		C50949F21E2F79FA003CEA51 = {
 			isa = PBXGroup;
 			children = (
-				C5C61D1C1E3615F1000130BB /* .gitignore */,
 				C50949FD1E2F79FA003CEA51 /* Multilingua */,
 				C5094A121E2F79FA003CEA51 /* MultilinguaTests */,
 				C5094A1D1E2F79FA003CEA51 /* MultilinguaUITests */,
@@ -159,6 +159,7 @@
 		C5C61D141E2FEDAE000130BB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				C5C61D1D1E362023000130BB /* Users.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -301,6 +302,7 @@
 			files = (
 				C5094A011E2F79FA003CEA51 /* ViewController.swift in Sources */,
 				C5C61D0A1E2FC131000130BB /* Dashboard.swift in Sources */,
+				C5C61D1E1E362023000130BB /* Users.swift in Sources */,
 				C50949FF1E2F79FA003CEA51 /* AppDelegate.swift in Sources */,
 				C5C61D131E2FCA7C000130BB /* SignIn.swift in Sources */,
 			);
