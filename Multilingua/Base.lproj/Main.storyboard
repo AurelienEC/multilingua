@@ -43,10 +43,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irn-4y-qaz">
-                                <rect key="frame" x="64" y="126" width="248" height="30"/>
-                                <state key="normal" title="Passer au controller suivant d'a côté"/>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrez votre nom d'utilisateur" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vIk-QR-FXK">
                                 <rect key="frame" x="38" y="254" width="300" height="30"/>
                                 <constraints>
@@ -86,7 +82,6 @@
                                 </state>
                                 <connections>
                                     <action selector="connectButton:" destination="iJ6-lM-5qP" eventType="touchUpInside" id="nAm-6M-jBh"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Fl2-aA-oqx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,7 +89,6 @@
                         <constraints>
                             <constraint firstItem="pLF-zz-gYq" firstAttribute="centerX" secondItem="WLW-mY-oSq" secondAttribute="centerX" id="1aY-Pj-QCG"/>
                             <constraint firstItem="wUe-c2-61T" firstAttribute="leading" secondItem="vIk-QR-FXK" secondAttribute="leading" id="4k0-6k-1lJ"/>
-                            <constraint firstItem="yFr-op-IU9" firstAttribute="top" secondItem="Irn-4y-qaz" secondAttribute="bottom" constant="511" id="5cN-wT-kfr"/>
                             <constraint firstItem="vIk-QR-FXK" firstAttribute="centerX" secondItem="WLW-mY-oSq" secondAttribute="centerX" id="O0Q-K2-L37"/>
                             <constraint firstItem="bSF-C5-ETr" firstAttribute="top" secondItem="wUe-c2-61T" secondAttribute="bottom" constant="8" symbolic="YES" id="RwX-nZ-jNR"/>
                             <constraint firstItem="wUe-c2-61T" firstAttribute="centerX" secondItem="WLW-mY-oSq" secondAttribute="centerX" id="UP0-P6-0oX"/>
@@ -104,7 +98,6 @@
                             <constraint firstItem="bSF-C5-ETr" firstAttribute="centerX" secondItem="WLW-mY-oSq" secondAttribute="centerX" id="YnZ-Dy-zBL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wj9-xE-i6Z" secondAttribute="trailing" constant="124" id="Znh-lP-g6b"/>
                             <constraint firstItem="vIk-QR-FXK" firstAttribute="top" secondItem="pLF-zz-gYq" secondAttribute="bottom" constant="8" symbolic="YES" id="cz0-RL-cHx"/>
-                            <constraint firstItem="Irn-4y-qaz" firstAttribute="centerX" secondItem="WLW-mY-oSq" secondAttribute="centerX" id="dLl-nu-OW9"/>
                             <constraint firstItem="wUe-c2-61T" firstAttribute="top" secondItem="WLW-mY-oSq" secondAttribute="top" constant="321" id="dpx-Z2-TyO"/>
                             <constraint firstItem="Wj9-xE-i6Z" firstAttribute="top" secondItem="bSF-C5-ETr" secondAttribute="bottom" constant="87" id="frT-SC-Ndq"/>
                             <constraint firstItem="yFr-op-IU9" firstAttribute="top" secondItem="Wj9-xE-i6Z" secondAttribute="bottom" constant="171" id="iC4-Lf-tgJ"/>
@@ -122,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="352.80000000000001" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="dashboard" id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dashboard" id="BYZ-38-t0r" customClass="Dashboard" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -133,12 +126,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvX-je-AG3">
+                                <rect key="frame" x="166" y="106" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="date"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bonjour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW8-YG-Fjg">
+                                <rect key="frame" x="42" y="165" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-8o-g64">
+                                <rect key="frame" x="153" y="165" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="OvX-je-AG3" id="0qH-vq-A7P"/>
+                        <outlet property="userLabel" destination="6Z2-8o-g64" id="bfK-NL-SWq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="37"/>
+            <point key="canvasLocation" x="1269.5999999999999" y="36.431784107946029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jea-6q-URA">

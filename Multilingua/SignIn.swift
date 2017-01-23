@@ -39,7 +39,10 @@ class SignIn: UIViewController
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         //                        UserDefaults.standard.synchronize()
                         self.dismiss(animated: true, completion: nil)
-                        
+                    
+                        let signIn = storyboard?.instantiateViewController(withIdentifier: "dashboard") as! Dashboard
+                        signIn.stringPassed = username.text!
+                        navigationController?.pushViewController(signIn, animated: true)
                     
                     
                 }
