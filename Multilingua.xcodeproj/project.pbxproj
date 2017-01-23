@@ -19,6 +19,9 @@
 		C5C61D111E2FC489000130BB /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = C5C61D0F1E2FC489000130BB /* Roboto */; };
 		C5C61D131E2FCA7C000130BB /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D121E2FCA7C000130BB /* SignIn.swift */; };
 		C5C61D1E1E362023000130BB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D1D1E362023000130BB /* Users.swift */; };
+		C5C61D201E3659E6000130BB /* LessonsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */; };
+		C5C61D221E3659F1000130BB /* NextDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D211E3659F1000130BB /* NextDates.swift */; };
+		C5C61D241E3659FC000130BB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D231E3659FC000130BB /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		C5C61D0F1E2FC489000130BB /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
 		C5C61D121E2FCA7C000130BB /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		C5C61D1D1E362023000130BB /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsExercises.swift; sourceTree = "<group>"; };
+		C5C61D211E3659F1000130BB /* NextDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextDates.swift; sourceTree = "<group>"; };
+		C5C61D231E3659FC000130BB /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,9 @@
 			children = (
 				C5C61D091E2FC131000130BB /* Dashboard.swift */,
 				C5C61D121E2FCA7C000130BB /* SignIn.swift */,
+				C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */,
+				C5C61D211E3659F1000130BB /* NextDates.swift */,
+				C5C61D231E3659FC000130BB /* Contact.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -304,7 +313,10 @@
 				C5C61D0A1E2FC131000130BB /* Dashboard.swift in Sources */,
 				C5C61D1E1E362023000130BB /* Users.swift in Sources */,
 				C50949FF1E2F79FA003CEA51 /* AppDelegate.swift in Sources */,
+				C5C61D241E3659FC000130BB /* Contact.swift in Sources */,
 				C5C61D131E2FCA7C000130BB /* SignIn.swift in Sources */,
+				C5C61D201E3659E6000130BB /* LessonsExercises.swift in Sources */,
+				C5C61D221E3659F1000130BB /* NextDates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

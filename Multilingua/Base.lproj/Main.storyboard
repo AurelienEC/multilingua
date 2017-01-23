@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-BoldItalic.ttf">
+            <string>OpenSans-BoldItalic</string>
+        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
         </array>
@@ -85,7 +88,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40859164110000001" green="0.4418599889" blue="0.99947565790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pLF-zz-gYq" firstAttribute="centerX" secondItem="WLW-mY-oSq" secondAttribute="centerX" id="1aY-Pj-QCG"/>
                             <constraint firstItem="wUe-c2-61T" firstAttribute="leading" secondItem="vIk-QR-FXK" secondAttribute="leading" id="4k0-6k-1lJ"/>
@@ -107,6 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zap-we-lvm"/>
                     <connections>
+                        <outlet property="loginButton" destination="Wj9-xE-i6Z" id="tUg-y5-P9T"/>
                         <outlet property="password" destination="bSF-C5-ETr" id="adz-j8-oJw"/>
                         <outlet property="username" destination="vIk-QR-FXK" id="Ia7-B5-sRB"/>
                     </connections>
@@ -127,31 +131,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvX-je-AG3">
-                                <rect key="frame" x="166" y="106" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvX-je-AG3">
+                                <rect key="frame" x="166.5" y="106" width="42" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="date"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bonjour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW8-YG-Fjg">
-                                <rect key="frame" x="42" y="165" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-8o-g64">
+                                <rect key="frame" x="16" y="167" width="343" height="31.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-BoldItalic" family="Open Sans" pointSize="23"/>
+                                <color key="textColor" red="0.40859164110000001" green="0.4418599889" blue="0.99947565790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-8o-g64">
-                                <rect key="frame" x="129" y="165" width="42" height="21"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ic_dashboard" translatesAutoresizingMaskIntoConstraints="NO" id="r59-kj-Iqc">
+                                <rect key="frame" x="16" y="623" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z18-ha-U0o">
+                                <rect key="frame" x="166" y="359" width="25" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <accessibility key="accessibilityConfiguration" identifier="lessons"/>
+                                <state key="normal" title="Lessons" image="ic_school"/>
+                                <connections>
+                                    <segue destination="Xs9-U1-mYs" kind="show" id="810-3C-uWq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frJ-g1-CTh">
+                                <rect key="frame" x="270" y="469" width="89" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Contact" image="ic_mail_outline"/>
+                                <connections>
+                                    <segue destination="PNP-ns-nYF" kind="show" id="T6Y-uk-PBD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EM-tw-Cvn">
+                                <rect key="frame" x="57" y="469" width="97" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calendar" image="ic_date_range"/>
+                                <connections>
+                                    <segue destination="oYx-OY-zJt" kind="show" id="Opf-Jb-HBW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OvX-je-AG3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5oz-xR-Rwm"/>
+                            <constraint firstItem="6Z2-8o-g64" firstAttribute="top" secondItem="OvX-je-AG3" secondAttribute="bottom" constant="40" id="IgL-nY-8xB"/>
+                            <constraint firstItem="OvX-je-AG3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="QT0-le-arP"/>
+                            <constraint firstItem="6Z2-8o-g64" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UNe-Uz-aT3"/>
+                            <constraint firstItem="6Z2-8o-g64" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="taK-bd-mnu"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateLabel" destination="OvX-je-AG3" id="0qH-vq-A7P"/>
                         <outlet property="userLabel" destination="6Z2-8o-g64" id="bfK-NL-SWq"/>
@@ -160,6 +193,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1269.5999999999999" y="36.431784107946029"/>
+        </scene>
+        <!--Next Dates-->
+        <scene sceneID="KEm-4M-aVY">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dld-kh-IyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="oYx-OY-zJt" customClass="NextDates" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ofK-qX-ZuK"/>
+                        <viewControllerLayoutGuide type="bottom" id="LIv-9q-5Lc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zmm-Cy-uL7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2018" y="739"/>
+        </scene>
+        <!--Lessons Exercices-->
+        <scene sceneID="t68-4K-DXy">
+            <objects>
+                <viewController storyboardIdentifier="lessons" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xs9-U1-mYs" customClass="LessonsExercices" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gXA-a0-Q7b"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vjc-TJ-Q3q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ca-Om-vqa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="lessons"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGn-8D-rI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="67.916041979010501"/>
+        </scene>
+        <!--Contact-->
+        <scene sceneID="1fX-v0-RF6">
+            <objects>
+                <viewController id="PNP-ns-nYF" customClass="Contact" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iDB-Bp-exF"/>
+                        <viewControllerLayoutGuide type="bottom" id="OtE-Cd-1ZK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fSK-OL-uI9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8j-it-2kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="-501"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jea-6q-URA">
@@ -180,4 +268,10 @@
             <point key="canvasLocation" x="-586.39999999999998" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_dashboard" width="24" height="24"/>
+        <image name="ic_date_range" width="24" height="24"/>
+        <image name="ic_mail_outline" width="24" height="24"/>
+        <image name="ic_school" width="24" height="24"/>
+    </resources>
 </document>

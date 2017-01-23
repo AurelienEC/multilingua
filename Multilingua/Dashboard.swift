@@ -16,10 +16,15 @@ class Dashboard: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     
+    @IBOutlet weak var lessonsImage: UIImageView!
+    @IBOutlet weak var calendarImage: UIImageView!
+    @IBOutlet weak var contactImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Dashboard.date), userInfo: nil, repeats: true)
-        userLabel.text = stringPassed
+        userLabel.text = "Bonjour, " + stringPassed
+        userLabel.textAlignment = NSTextAlignment.center
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,4 +37,32 @@ class Dashboard: UIViewController {
         dateLabel.text = date.string(from: Date())
         dateLabel.textAlignment = NSTextAlignment.center
     }
+    
+    @IBAction func lessonsClic(sender : UIButton) {
+        //On récupère Main.storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //On crée une instance d'Exercice à partir du storyboard
+        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercices
+        //On montre le nouveau controller
+        navigationController?.show(lessons, sender: self)
+    }
+    
+//    @IBAction func calendarClic(sender : UIButton) {
+//        //On récupère Main.storyboard
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        //On crée une instance d'Exercice à partir du storyboard
+//        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercices
+//        //On montre le nouveau controller
+//        navigationController?.show(lessons, sender: self)
+//    }
+//    
+//    @IBAction func contactClic(sender : UIButton) {
+//        //On récupère Main.storyboard
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        //On crée une instance d'Exercice à partir du storyboard
+//        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercices
+//        //On montre le nouveau controller
+//        navigationController?.show(lessons, sender: self)
+//    }
+    
 }

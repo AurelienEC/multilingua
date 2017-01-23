@@ -12,9 +12,13 @@ class SignIn: UIViewController
 {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.layer.cornerRadius = 5
     }
     
     override func didReceiveMemoryWarning() {
