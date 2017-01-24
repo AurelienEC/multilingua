@@ -30,9 +30,14 @@ class Dashboard: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "Tableau de Bord"
+        navigationItem.hidesBackButton = true
+    }
     
     func date(){
         let date = DateFormatter()
+        date.locale = Locale(identifier: "fr_FR")
         date.dateStyle = .full
         dateLabel.text = date.string(from: Date())
         dateLabel.textAlignment = NSTextAlignment.center

@@ -1,5 +1,5 @@
 //
-//  Lesson.swift
+//  LessonDay.swift
 //  Multilingua
 //
 //  Created by Oliv on 23/01/2017.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Lesson: UIViewController{
+class LessonDay: UIViewController{
     
 }
