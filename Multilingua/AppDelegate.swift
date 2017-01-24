@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window?.tintColor = UIColor(red: 20/255, green: 132/255, blue: 255/255, alpha: 1.0)
+        let tabBarController = UITabBarController()
+        tabBarController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+        
         return true
     }
 

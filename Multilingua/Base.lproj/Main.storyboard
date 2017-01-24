@@ -13,6 +13,9 @@
         <array key="OpenSans-BoldItalic.ttf">
             <string>OpenSans-BoldItalic</string>
         </array>
+        <array key="OpenSans-ExtraBold.ttf">
+            <string>OpenSans-Extrabold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Sign In-->
@@ -234,10 +237,10 @@
             </objects>
             <point key="canvasLocation" x="2016.8" y="738.08095952023996"/>
         </scene>
-        <!--Lesson Day-->
+        <!--Exercise Day-->
         <scene sceneID="GnQ-nQ-ZEl">
             <objects>
-                <viewController storyboardIdentifier="lessonDay" id="Gvs-Wi-eEI" customClass="LessonDay" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exerciseDay" id="Gvs-Wi-eEI" customClass="ExerciseDay" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2AH-9x-1US"/>
                         <viewControllerLayoutGuide type="bottom" id="0RZ-j6-BzP"/>
@@ -246,7 +249,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Pour l'instant le text n'est pas géré dynamiquement, mais les leçons seront affichées ici." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2b8-4w-1Dt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Exercice du JOUR" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2b8-4w-1Dt">
                                 <rect key="frame" x="67" y="194" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -261,10 +264,10 @@
             </objects>
             <point key="canvasLocation" x="3425" y="-312"/>
         </scene>
-        <!--Lesson Before Yesterday-->
+        <!--Exercise Before Yesterday-->
         <scene sceneID="bDj-CA-Laj">
             <objects>
-                <viewController storyboardIdentifier="lessonBeforeYesterday" id="w1E-zY-Ml7" customClass="LessonBeforeYesterday" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exerciseBeforeYesterday" id="w1E-zY-Ml7" customClass="ExerciseBeforeYesterday" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ond-j0-YyD"/>
                         <viewControllerLayoutGuide type="bottom" id="cOg-cV-eiK"/>
@@ -273,7 +276,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lecon du jour avant hier" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yk1-Z2-84E">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Exercice relatif à la leçon d'avant hier" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yk1-Z2-84E">
                                 <rect key="frame" x="67" y="245" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -288,10 +291,10 @@
             </objects>
             <point key="canvasLocation" x="3340" y="636"/>
         </scene>
-        <!--Lesson Yesterday-->
+        <!--Exercise Yesterday-->
         <scene sceneID="Op4-gQ-vRE">
             <objects>
-                <viewController storyboardIdentifier="lessonYesterday" id="xL9-mE-8hd" customClass="LessonYesterday" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exerciseYesterday" id="xL9-mE-8hd" customClass="ExerciseYesterday" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nbi-33-PeJ"/>
                         <viewControllerLayoutGuide type="bottom" id="L6u-km-JO0"/>
@@ -300,7 +303,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lecon du yesterday" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="26I-BH-jWC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Exercice de HIER" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="26I-BH-jWC">
                                 <rect key="frame" x="87" y="231" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -327,27 +330,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eZj-Mo-hvI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leçon du Jour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-wn-ove">
+                                <rect key="frame" x="87" y="143" width="202" height="24"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" red="0.079285178070000004" green="0.51670005789999995" blue="1" alpha="0.53595890410000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZn-hN-M0Q">
+                                <rect key="frame" x="113" y="493" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.047545011522139968" green="0.80464092026383571" blue="1" alpha="0.4258347602739726" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Xy-VB-uko"/>
+                                    <constraint firstAttribute="width" constant="150" id="zbE-ff-fgN"/>
+                                </constraints>
+                                <state key="normal" title="Passer à l'exercice"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Xs9-U1-mYs" id="CHc-V2-6m7"/>
-                                    <outlet property="delegate" destination="Xs9-U1-mYs" id="eFH-S7-mgL"/>
+                                    <action selector="goToExercise:" destination="Xs9-U1-mYs" eventType="touchUpInside" id="36H-T3-3mI"/>
                                 </connections>
-                            </tableView>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BwR-AY-KQH">
+                                <rect key="frame" x="68" y="203.5" width="239" height="168.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="lessons"/>
                         <constraints>
-                            <constraint firstItem="eZj-Mo-hvI" firstAttribute="leading" secondItem="0ca-Om-vqa" secondAttribute="leadingMargin" constant="-16" id="QM5-9y-eea"/>
-                            <constraint firstItem="eZj-Mo-hvI" firstAttribute="top" secondItem="gXA-a0-Q7b" secondAttribute="bottom" id="ifo-tN-3Ga"/>
-                            <constraint firstItem="Vjc-TJ-Q3q" firstAttribute="top" secondItem="eZj-Mo-hvI" secondAttribute="bottom" id="y0k-zU-0c3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eZj-Mo-hvI" secondAttribute="trailing" constant="-16" id="yaX-Fx-DTn"/>
+                            <constraint firstItem="BZn-hN-M0Q" firstAttribute="top" secondItem="BwR-AY-KQH" secondAttribute="bottom" constant="121" id="0b3-Y8-vdD"/>
+                            <constraint firstItem="Vjc-TJ-Q3q" firstAttribute="top" secondItem="BZn-hN-M0Q" secondAttribute="bottom" constant="90" id="71J-1j-dxg"/>
+                            <constraint firstItem="BZn-hN-M0Q" firstAttribute="leading" secondItem="0ca-Om-vqa" secondAttribute="leadingMargin" constant="97" id="8HT-As-y3e"/>
+                            <constraint firstItem="zhm-wn-ove" firstAttribute="leading" secondItem="0ca-Om-vqa" secondAttribute="leadingMargin" constant="71" id="FbM-gZ-hUu"/>
+                            <constraint firstItem="BwR-AY-KQH" firstAttribute="leading" secondItem="0ca-Om-vqa" secondAttribute="leadingMargin" constant="52" id="V46-ZX-vv2"/>
+                            <constraint firstItem="zhm-wn-ove" firstAttribute="top" secondItem="gXA-a0-Q7b" secondAttribute="bottom" constant="79" id="dj1-W4-3AG"/>
+                            <constraint firstItem="BwR-AY-KQH" firstAttribute="top" secondItem="zhm-wn-ove" secondAttribute="bottom" constant="37" id="hp8-4s-zwn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zhm-wn-ove" secondAttribute="trailing" constant="70" id="oeD-3g-JXM"/>
+                            <constraint firstItem="BwR-AY-KQH" firstAttribute="centerX" secondItem="zhm-wn-ove" secondAttribute="centerX" id="qBK-5x-0BP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BZn-hN-M0Q" secondAttribute="trailing" constant="96" id="rhw-ll-ah4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="eZj-Mo-hvI" id="EXM-Pn-ufw"/>
+                        <outlet property="goToExercise" destination="BZn-hN-M0Q" id="8oj-wg-UuP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGn-8D-rI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
