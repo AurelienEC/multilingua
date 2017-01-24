@@ -22,6 +22,10 @@
 		C5C61D201E3659E6000130BB /* LessonsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */; };
 		C5C61D221E3659F1000130BB /* NextDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D211E3659F1000130BB /* NextDates.swift */; };
 		C5C61D241E3659FC000130BB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D231E3659FC000130BB /* Contact.swift */; };
+		C5C61D261E367A86000130BB /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D251E367A86000130BB /* Lessons.swift */; };
+		C5C61D281E367B24000130BB /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D271E367B24000130BB /* Lesson.swift */; };
+		C5C61D2A1E367B3B000130BB /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D291E367B3B000130BB /* Exercise.swift */; };
+		C5C61D2C1E367B50000130BB /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D2B1E367B50000130BB /* Exercises.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsExercises.swift; sourceTree = "<group>"; };
 		C5C61D211E3659F1000130BB /* NextDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextDates.swift; sourceTree = "<group>"; };
 		C5C61D231E3659FC000130BB /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		C5C61D251E367A86000130BB /* Lessons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
+		C5C61D271E367B24000130BB /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		C5C61D291E367B3B000130BB /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		C5C61D2B1E367B50000130BB /* Exercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +158,8 @@
 				C5C61D091E2FC131000130BB /* Dashboard.swift */,
 				C5C61D121E2FCA7C000130BB /* SignIn.swift */,
 				C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */,
+				C5C61D271E367B24000130BB /* Lesson.swift */,
+				C5C61D291E367B3B000130BB /* Exercise.swift */,
 				C5C61D211E3659F1000130BB /* NextDates.swift */,
 				C5C61D231E3659FC000130BB /* Contact.swift */,
 			);
@@ -169,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				C5C61D1D1E362023000130BB /* Users.swift */,
+				C5C61D251E367A86000130BB /* Lessons.swift */,
+				C5C61D2B1E367B50000130BB /* Exercises.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -309,10 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C61D261E367A86000130BB /* Lessons.swift in Sources */,
+				C5C61D2C1E367B50000130BB /* Exercises.swift in Sources */,
 				C5094A011E2F79FA003CEA51 /* ViewController.swift in Sources */,
 				C5C61D0A1E2FC131000130BB /* Dashboard.swift in Sources */,
 				C5C61D1E1E362023000130BB /* Users.swift in Sources */,
 				C50949FF1E2F79FA003CEA51 /* AppDelegate.swift in Sources */,
+				C5C61D281E367B24000130BB /* Lesson.swift in Sources */,
+				C5C61D2A1E367B3B000130BB /* Exercise.swift in Sources */,
 				C5C61D241E3659FC000130BB /* Contact.swift in Sources */,
 				C5C61D131E2FCA7C000130BB /* SignIn.swift in Sources */,
 				C5C61D201E3659E6000130BB /* LessonsExercises.swift in Sources */,
@@ -417,6 +433,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -459,6 +476,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

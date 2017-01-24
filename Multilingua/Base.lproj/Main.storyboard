@@ -149,30 +149,54 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z18-ha-U0o">
-                                <rect key="frame" x="166" y="359" width="25" height="24"/>
+                                <rect key="frame" x="142" y="340" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lessons"/>
-                                <state key="normal" title="Lessons" image="ic_school"/>
+                                <state key="normal" title="Lessons" image="Lessons-icon"/>
                                 <connections>
                                     <segue destination="Xs9-U1-mYs" kind="show" id="810-3C-uWq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frJ-g1-CTh">
-                                <rect key="frame" x="270" y="469" width="89" height="24"/>
+                                <rect key="frame" x="248" y="469" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Contact" image="ic_mail_outline"/>
+                                <accessibility key="accessibilityConfiguration" identifier="contact"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Contact" image="contacts-icon"/>
                                 <connections>
                                     <segue destination="PNP-ns-nYF" kind="show" id="T6Y-uk-PBD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EM-tw-Cvn">
-                                <rect key="frame" x="57" y="469" width="97" height="24"/>
+                                <rect key="frame" x="44" y="469" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calendar" image="ic_date_range"/>
+                                <accessibility key="accessibilityConfiguration" identifier="calendar"/>
+                                <state key="normal" title="Calendar" image="Calendar-icon"/>
                                 <connections>
                                     <segue destination="oYx-OY-zJt" kind="show" id="Opf-Jb-HBW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leçons &amp; Exercices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5N-J8-hpl">
+                                <rect key="frame" x="113" y="440" width="149" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prochaines dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-DL-u3o">
+                                <rect key="frame" x="23" y="566" width="132" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okr-ze-qfk">
+                                <rect key="frame" x="263" y="567" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -197,7 +221,6 @@
         <!--Next Dates-->
         <scene sceneID="KEm-4M-aVY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dld-kh-IyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="oYx-OY-zJt" customClass="NextDates" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ofK-qX-ZuK"/>
@@ -206,16 +229,63 @@
                     <view key="view" contentMode="scaleToFill" id="Zmm-Cy-uL7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="V8A-KE-Tti">
+                                <rect key="frame" x="16" y="72" width="343" height="328"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oYx-OY-zJt" id="ZeU-QZ-961"/>
+                                    <outlet property="delegate" destination="oYx-OY-zJt" id="REQ-WZ-K0m"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V8A-KE-Tti" firstAttribute="leading" secondItem="Zmm-Cy-uL7" secondAttribute="leadingMargin" id="SoE-r1-Mfk"/>
+                            <constraint firstItem="LIv-9q-5Lc" firstAttribute="top" secondItem="V8A-KE-Tti" secondAttribute="bottom" constant="223" id="byY-EQ-w0R"/>
+                            <constraint firstItem="V8A-KE-Tti" firstAttribute="trailing" secondItem="Zmm-Cy-uL7" secondAttribute="trailingMargin" id="kC4-RK-dZu"/>
+                            <constraint firstItem="V8A-KE-Tti" firstAttribute="top" secondItem="ofK-qX-ZuK" secondAttribute="bottom" constant="8" id="vE1-KR-Upa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="V8A-KE-Tti" id="yp3-76-YXJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dld-kh-IyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016.8" y="738.08095952023996"/>
+        </scene>
+        <!--Lesson-->
+        <scene sceneID="GnQ-nQ-ZEl">
+            <objects>
+                <viewController id="Gvs-Wi-eEI" customClass="Lesson" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2AH-9x-1US"/>
+                        <viewControllerLayoutGuide type="bottom" id="0RZ-j6-BzP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HaC-ft-G1n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Pour l'instant le text n'est pas géré dynamiquement, mais les leçons seront affichées ici." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2b8-4w-1Dt">
+                                <rect key="frame" x="67" y="194" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oz5-Z6-3dG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018" y="739"/>
+            <point key="canvasLocation" x="3668" y="68"/>
         </scene>
-        <!--Lessons Exercices-->
+        <!--Lessons Exercises-->
         <scene sceneID="t68-4K-DXy">
             <objects>
-                <viewController storyboardIdentifier="lessons" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xs9-U1-mYs" customClass="LessonsExercices" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lessons" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xs9-U1-mYs" customClass="LessonsExercises" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gXA-a0-Q7b"/>
                         <viewControllerLayoutGuide type="bottom" id="Vjc-TJ-Q3q"/>
@@ -223,9 +293,29 @@
                     <view key="view" contentMode="scaleToFill" id="0ca-Om-vqa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eZj-Mo-hvI">
+                                <rect key="frame" x="16" y="72" width="338" height="365"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xs9-U1-mYs" id="CHc-V2-6m7"/>
+                                    <outlet property="delegate" destination="Xs9-U1-mYs" id="eFH-S7-mgL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="lessons"/>
+                        <constraints>
+                            <constraint firstItem="eZj-Mo-hvI" firstAttribute="leading" secondItem="0ca-Om-vqa" secondAttribute="leadingMargin" id="QM5-9y-eea"/>
+                            <constraint firstItem="eZj-Mo-hvI" firstAttribute="top" secondItem="gXA-a0-Q7b" secondAttribute="bottom" constant="8" id="ifo-tN-3Ga"/>
+                            <constraint firstItem="Vjc-TJ-Q3q" firstAttribute="top" secondItem="eZj-Mo-hvI" secondAttribute="bottom" constant="186" id="y0k-zU-0c3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eZj-Mo-hvI" secondAttribute="trailing" constant="5" id="yaX-Fx-DTn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="eZj-Mo-hvI" id="EXM-Pn-ufw"/>
+                        <outlet property="view" destination="eZj-Mo-hvI" id="6Fl-On-c1B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGn-8D-rI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,9 +359,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Calendar-icon" width="256" height="256"/>
+        <image name="Lessons-icon" width="512" height="512"/>
+        <image name="contacts-icon" width="256" height="256"/>
         <image name="ic_dashboard" width="24" height="24"/>
-        <image name="ic_date_range" width="24" height="24"/>
-        <image name="ic_mail_outline" width="24" height="24"/>
-        <image name="ic_school" width="24" height="24"/>
     </resources>
 </document>

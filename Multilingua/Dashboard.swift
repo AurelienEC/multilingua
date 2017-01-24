@@ -42,20 +42,20 @@ class Dashboard: UIViewController {
         //On récupère Main.storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         //On crée une instance d'Exercice à partir du storyboard
-        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercices
+        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercises
         //On montre le nouveau controller
         navigationController?.show(lessons, sender: self)
     }
     
-//    @IBAction func calendarClic(sender : UIButton) {
-//        //On récupère Main.storyboard
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        //On crée une instance d'Exercice à partir du storyboard
-//        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercices
-//        //On montre le nouveau controller
-//        navigationController?.show(lessons, sender: self)
-//    }
-//    
+    @IBAction func calendarClic(sender : UIButton) {
+        //On récupère Main.storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //On crée une instance d'Exercice à partir du storyboard
+        let calendar = storyboard.instantiateViewController(withIdentifier: "calendar") as! NextDates
+        //On montre le nouveau controller
+        navigationController?.show(calendar, sender: self)
+    }
+//
 //    @IBAction func contactClic(sender : UIButton) {
 //        //On récupère Main.storyboard
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
