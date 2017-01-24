@@ -22,7 +22,15 @@ class LessonsExercises: UIViewController, UITableViewDelegate, UITableViewDataSo
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: textCellIdentifier)
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_dashboard"), style: .plain, target: self, action: #selector(dashIconTouched))
+
+    }
     
+    func dashIconTouched(sender: UIBarButtonItem){
+        let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? Dashboard
+        navigationController?.pushViewController(destinationViewController!, animated: true)
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -38,6 +46,9 @@ class LessonsExercises: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Retour"
+        navigationItem.backBarButtonItem = backItem
         if indexPath.row == 0 {
         //if such cell exists and destination controller (the one to show) exists too..
         if let _ = tableView.cellForRow(at: indexPath as IndexPath), let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "lessonDay") as? LessonDay{

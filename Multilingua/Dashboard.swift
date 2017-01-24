@@ -33,6 +33,7 @@ class Dashboard: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Tableau de Bord"
         navigationItem.hidesBackButton = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_dashboard"), style: .plain, target: Dashboard.self, action: nil)
     }
     
     func date(){
@@ -50,6 +51,7 @@ class Dashboard: UIViewController {
         let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercises
         //On montre le nouveau controller
         navigationController?.show(lessons, sender: self)
+        
     }
     
     @IBAction func calendarClic(sender : UIButton) {

@@ -127,10 +127,6 @@
                                 <color key="textColor" red="0.40859164110000001" green="0.4418599889" blue="0.99947565790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ic_dashboard" translatesAutoresizingMaskIntoConstraints="NO" id="r59-kj-Iqc">
-                                <rect key="frame" x="16" y="623" width="24" height="24"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frJ-g1-CTh">
                                 <rect key="frame" x="248" y="469" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -418,7 +414,6 @@
         <image name="Calendar-icon" width="256" height="256"/>
         <image name="Lessons-icon" width="512" height="512"/>
         <image name="contacts-icon" width="256" height="256"/>
-        <image name="ic_dashboard" width="24" height="24"/>
         <image name="text_logo" width="225" height="65"/>
     </resources>
 </document>

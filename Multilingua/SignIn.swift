@@ -27,6 +27,8 @@ class SignIn: UIViewController
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if Users.login(username:username.text, password: password.text){
+            UserDefaults.standard.string(forKey: "username")
+            UserDefaults.standard.string(forKey: "password")
             
             return true
         }
