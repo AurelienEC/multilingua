@@ -24,7 +24,7 @@ class Lessons{
             let today = userCalendar.date(byAdding: .day, value: i, to: Date())
             
             dateArray.append(String(describing: today))
-            print(today as Any)
+//            print(today as Any)
         }
         
         let lessons = [dateArray[0]:"Le preterit : Pour les verbes les plus courants, qu'on appelle verbes réguliers, il suffit d'ajouter -ED au verbe pour le mettre au prétérit",
@@ -32,7 +32,6 @@ class Lessons{
                        dateArray[2]:"Les adjectifs : Tous les adjectifs d’une syllabe sont des adjectifs courts. (Ex : nice / cool / old / tall)",
                        dateArray[3]:"Les comparatifs : Il existe 3 comparatifs : le comparatif de supériorité,  d'égalité, et enfin  d'infériorité"
         ]
-//        print(dateArray[6])
-        return lessons[String(dateArray[3])]!
+        return lessons[String(dateArray[0])]!
     }
 }

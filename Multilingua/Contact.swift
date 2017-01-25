@@ -11,6 +11,7 @@ import UIKit
 class Contact: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var notificationButton: UIButton!
     
     let contactTypes = ["Contacter par Téléphone", "Contacter par Mail"]
     let textCellIdentifier = "TextCell"
@@ -43,5 +44,9 @@ class Contact: UIViewController, UITableViewDataSource, UITableViewDelegate{
         cell.textLabel?.text = String(contactTypes[indexPath.row])
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
+    }
+    
+    func notifications(sender: UIButton){
+        
     }
 }

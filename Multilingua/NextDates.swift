@@ -32,7 +32,6 @@ class NextDates: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "basic")
         cell.textLabel?.text = String(dates[indexPath.row])
-        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
     }
 
