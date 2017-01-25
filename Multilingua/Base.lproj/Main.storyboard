@@ -349,8 +349,11 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BwR-AY-KQH">
-                                <rect key="frame" x="68" y="203.5" width="239" height="168.5"/>
+                                <rect key="frame" x="68" y="204" width="239" height="169"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="rSR-fY-pZK"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -359,20 +362,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="lessons"/>
                         <constraints>
-                            <constraint firstItem="BZn-hN-M0Q" firstAttribute="top" secondItem="BwR-AY-KQH" secondAttribute="bottom" constant="121" id="0b3-Y8-vdD"/>
-                            <constraint firstItem="Vjc-TJ-Q3q" firstAttribute="top" secondItem="BZn-hN-M0Q" secondAttribute="bottom" constant="90" id="71J-1j-dxg"/>
-                            <constraint firstItem="BZn-hN-M0Q" firstAttribute="leading" secondItem="0ca-Om-vqa" secondAttribute="leadingMargin" constant="97" id="8HT-As-y3e"/>
                             <constraint firstItem="zhm-wn-ove" firstAttribute="leading" secondItem="0ca-Om-vqa" secondAttribute="leadingMargin" constant="71" id="FbM-gZ-hUu"/>
+                            <constraint firstItem="BZn-hN-M0Q" firstAttribute="centerX" secondItem="BwR-AY-KQH" secondAttribute="centerX" id="JLO-VG-GX4"/>
                             <constraint firstItem="BwR-AY-KQH" firstAttribute="leading" secondItem="0ca-Om-vqa" secondAttribute="leadingMargin" constant="52" id="V46-ZX-vv2"/>
                             <constraint firstItem="zhm-wn-ove" firstAttribute="top" secondItem="gXA-a0-Q7b" secondAttribute="bottom" constant="79" id="dj1-W4-3AG"/>
                             <constraint firstItem="BwR-AY-KQH" firstAttribute="top" secondItem="zhm-wn-ove" secondAttribute="bottom" constant="37" id="hp8-4s-zwn"/>
+                            <constraint firstItem="Vjc-TJ-Q3q" firstAttribute="top" secondItem="BZn-hN-M0Q" secondAttribute="bottom" constant="90" id="kmu-jh-Vru"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zhm-wn-ove" secondAttribute="trailing" constant="70" id="oeD-3g-JXM"/>
                             <constraint firstItem="BwR-AY-KQH" firstAttribute="centerX" secondItem="zhm-wn-ove" secondAttribute="centerX" id="qBK-5x-0BP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BZn-hN-M0Q" secondAttribute="trailing" constant="96" id="rhw-ll-ah4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="goToExercise" destination="BZn-hN-M0Q" id="8oj-wg-UuP"/>
+                        <outlet property="lessonTextContent" destination="BwR-AY-KQH" id="gBI-vd-Ej5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGn-8D-rI9" userLabel="First Responder" sceneMemberID="firstResponder"/>

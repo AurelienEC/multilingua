@@ -11,12 +11,15 @@ import UIKit
 class LessonsExercises: UIViewController{
     
     @IBOutlet weak var goToExercise: UIButton!
+    @IBOutlet weak var lessonTextContent: UITextView!
+    
     var arrayOfNames = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         goToExercise.layer.cornerRadius = 5
         arrayOfNames = ["exerciseDay","exerciseYesterday","exerciseBeforeYesterday"]
+        lessonTextContent.text = Lessons.showLessonOfToday()
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -30,7 +33,7 @@ class LessonsExercises: UIViewController{
         let vcName = arrayOfNames[randomNumber]
         
         let vc = storyboard?.instantiateViewController(withIdentifier: vcName)
-        self.present(vc!, animated: true, completion: nil)
+        navigationController?.pushViewController(vc!, animated: true)
     }
     
     func dashIconTouched(sender: UIBarButtonItem){
@@ -38,6 +41,11 @@ class LessonsExercises: UIViewController{
         navigationController?.pushViewController(destinationViewController!, animated: true)
     }
 
+    
+    func showLesson(_ sender: UITextView){
+
+        
+    }
     
     
 }
