@@ -46,7 +46,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom d'Utilisateur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-zz-gYq">
-                                <rect key="frame" x="38" y="225.5" width="300" height="20.5"/>
+                                <rect key="frame" x="38" y="225" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="x6U-Xg-vpD"/>
                                 </constraints>
@@ -300,6 +300,9 @@
                                 <rect key="frame" x="110" y="518" width="155" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <segue destination="UaP-Gi-sEI" kind="show" identifier="validateAnswerSegue" id="aF5-sy-owX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVL-97-oWH" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
                                 <rect key="frame" x="324" y="262" width="35" height="24"/>
@@ -329,6 +332,10 @@
                         <outlet property="answer2" destination="fmn-XQ-ON7" id="bmK-AI-vQI"/>
                         <outlet property="answer3" destination="gc3-x9-Q50" id="Wbb-yK-7xo"/>
                         <outlet property="answer4" destination="Zaf-gz-Rbs" id="L5H-ib-4Sz"/>
+                        <outlet property="answerText1" destination="1SS-tp-jlI" id="RoQ-zB-cJf"/>
+                        <outlet property="answerText2" destination="YLJ-85-OGp" id="PMT-hM-ihx"/>
+                        <outlet property="answerText3" destination="3MI-dF-mGX" id="xKz-4m-mIN"/>
+                        <outlet property="answerText4" destination="zwe-eN-pEu" id="DBE-0n-fH1"/>
                         <outlet property="consigneLabel" destination="V0Z-jv-zg2" id="5A5-NT-kUZ"/>
                         <outlet property="validateButton" destination="khX-Lt-Z1R" id="rEb-So-3X0"/>
                     </connections>
@@ -391,6 +398,36 @@
             </objects>
             <point key="canvasLocation" x="4078" y="208"/>
         </scene>
+        <!--Answers-->
+        <scene sceneID="dbx-c2-eVS">
+            <objects>
+                <viewController id="UaP-Gi-sEI" customClass="Answers" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L1I-bG-anc"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ki-dP-xEm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PAD-yw-v4q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Réponse de l'exercice" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P5V-Pv-QJm">
+                                <rect key="frame" x="67" y="229" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerText" destination="P5V-Pv-QJm" id="rF6-ew-aQQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lG5-sq-Mae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4266" y="-470"/>
+        </scene>
         <!--Lessons Exercises-->
         <scene sceneID="t68-4K-DXy">
             <objects>
@@ -404,7 +441,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leçon du Jour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-wn-ove">
-                                <rect key="frame" x="87" y="143" width="202" height="24"/>
+                                <rect key="frame" x="87" y="143" width="202" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" red="0.079285178070000004" green="0.51670005789999995" blue="1" alpha="0.53595890410000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -422,7 +459,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BwR-AY-KQH">
-                                <rect key="frame" x="68" y="204" width="239" height="169"/>
+                                <rect key="frame" x="68" y="203.5" width="239" height="169"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="169" id="rSR-fY-pZK"/>

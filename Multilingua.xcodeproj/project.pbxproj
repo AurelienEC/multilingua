@@ -30,6 +30,7 @@
 		C5E2D80E1E37888C009CC9EE /* ExerciseBeforeYesterday.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterday.swift */; };
 		C5E2D8111E38F3E2009CC9EE /* radioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8101E38F3E2009CC9EE /* radioButtons.swift */; };
 		C5E2D8131E38F3EC009CC9EE /* checkBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8121E38F3EC009CC9EE /* checkBoxes.swift */; };
+		C5E2D8151E3A411A009CC9EE /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8141E3A411A009CC9EE /* Answers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseBeforeYesterday.swift; sourceTree = "<group>"; };
 		C5E2D8101E38F3E2009CC9EE /* radioButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = radioButtons.swift; sourceTree = "<group>"; };
 		C5E2D8121E38F3EC009CC9EE /* checkBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkBoxes.swift; sourceTree = "<group>"; };
+		C5E2D8141E3A411A009CC9EE /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,13 +166,14 @@
 		C5C61D0B1E2FC137000130BB /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C5E2D80A1E378863009CC9EE /* exercises */,
-				C5C61D091E2FC131000130BB /* Dashboard.swift */,
-				C5C61D121E2FCA7C000130BB /* SignIn.swift */,
-				C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */,
-				C5C61D291E367B3B000130BB /* Exercise.swift */,
-				C5C61D211E3659F1000130BB /* NextDates.swift */,
+				C5E2D8141E3A411A009CC9EE /* Answers.swift */,
 				C5C61D231E3659FC000130BB /* Contact.swift */,
+				C5C61D091E2FC131000130BB /* Dashboard.swift */,
+				C5C61D291E367B3B000130BB /* Exercise.swift */,
+				C5E2D80A1E378863009CC9EE /* exercises */,
+				C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */,
+				C5C61D211E3659F1000130BB /* NextDates.swift */,
+				C5C61D121E2FCA7C000130BB /* SignIn.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				C5E2D8131E38F3EC009CC9EE /* checkBoxes.swift in Sources */,
 				C5E2D8111E38F3E2009CC9EE /* radioButtons.swift in Sources */,
 				C5C61D131E2FCA7C000130BB /* SignIn.swift in Sources */,
+				C5E2D8151E3A411A009CC9EE /* Answers.swift in Sources */,
 				C5E2D80C1E37887D009CC9EE /* ExerciseYesterday.swift in Sources */,
 				C5C61D201E3659E6000130BB /* LessonsExercises.swift in Sources */,
 				C5C61D221E3659F1000130BB /* NextDates.swift in Sources */,

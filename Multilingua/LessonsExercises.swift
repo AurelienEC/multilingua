@@ -34,6 +34,7 @@ class LessonsExercises: UIViewController{
         
         let vc = storyboard?.instantiateViewController(withIdentifier: vcName)
         navigationController?.pushViewController(vc!, animated: true)
+        
     }
     
     func dashIconTouched(sender: UIBarButtonItem){

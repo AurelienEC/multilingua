@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Exercise: UIViewController{
+class Exercise: UIViewController, DataSentDelegate{
     
     @IBOutlet weak var consigneLabel: UILabel!
     
@@ -16,6 +16,12 @@ class Exercise: UIViewController{
     @IBOutlet weak var answer2: RadioButton!
     @IBOutlet weak var answer3: RadioButton!
     @IBOutlet weak var answer4: RadioButton!
+    
+    @IBOutlet weak var answerText1: UILabel!
+    @IBOutlet weak var answerText2: UILabel!
+    @IBOutlet weak var answerText3: UILabel!
+    @IBOutlet weak var answerText4: UILabel!
+
     
     @IBOutlet weak var validateButton: UIButton!
     
@@ -26,7 +32,7 @@ class Exercise: UIViewController{
         answer2?.alternateButton = [answer1!, answer3!, answer4!]
         answer3?.alternateButton = [answer1!, answer2!, answer4!]
         answer4?.alternateButton = [answer1!, answer2!, answer3!]
-        
+                
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +46,10 @@ class Exercise: UIViewController{
         answer2.isSelected = false
         answer3.isSelected = false
         answer4.isSelected = false
+    }
+    
+    func userDidEnterData(data:String){
+        answerText1.text = data
     }
     
     func checkAnswer(sender: RadioButton){
