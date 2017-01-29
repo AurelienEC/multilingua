@@ -1,5 +1,5 @@
 //
-//  SignIn.swift
+//  SignInViewController.swift
 //  Multilingua
 //
 //  Created by Oliv on 18/01/2017.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class SignIn: UIViewController
+class SignInViewController: UIViewController
 {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +53,7 @@ class SignIn: UIViewController
         
         if segue.identifier == "logInSegue"{
             
-            let dashboard = segue.destination as! Dashboard
+            let dashboard = segue.destination as! DashboardViewController
             dashboard.stringPassed = username.text!
         }
     }

@@ -1,5 +1,5 @@
 //
-//  Exercise.swift
+//  ExerciseBeforeYesterdayVC.swift
 //  Multilingua
 //
 //  Created by Oliv on 23/01/2017.
@@ -8,9 +8,11 @@
 
 import UIKit
 
-class Exercise: UIViewController, DataSentDelegate{
+class ExerciseBeforeYesterdayVC: UIViewController{
     
-    @IBOutlet weak var consigneLabel: UILabel!
+    var questionPassed: String = ""
+    
+    @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var answer1: RadioButton!
     @IBOutlet weak var answer2: RadioButton!
@@ -21,18 +23,23 @@ class Exercise: UIViewController, DataSentDelegate{
     @IBOutlet weak var answerText2: UILabel!
     @IBOutlet weak var answerText3: UILabel!
     @IBOutlet weak var answerText4: UILabel!
-
     
     @IBOutlet weak var validateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        consigneLabel.text = "Indiquez la bonne réponse parmi les choix proposés"
+        
         answer1?.alternateButton = [answer2!, answer3!, answer4!]
         answer2?.alternateButton = [answer1!, answer3!, answer4!]
         answer3?.alternateButton = [answer1!, answer2!, answer4!]
         answer4?.alternateButton = [answer1!, answer2!, answer3!]
-                
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.questionLabel.text = "Question : " + questionPassed
+        questionLabel.textAlignment = NSTextAlignment.center
     }
     
     override func didReceiveMemoryWarning() {

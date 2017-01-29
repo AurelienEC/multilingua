@@ -2,28 +2,31 @@
 //  Answers.swift
 //  Multilingua
 //
-//  Created by Oliv on 26/01/2017.
+//  Created by Oliv on 27/01/2017.
 //  Copyright © 2017 Oliv. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Answers: UIViewController, DataSentDelegate{
+class Answers{
     
-    @IBOutlet weak var answerText: UITextView!
+    // liste des bonnes réponses
+    let expectedAnswerDDay:String = "Yes it's true"
+    let expectedAnswerYesterday:String = "went there."
+    let expectedAnswerBeforeYesterday:String = "was too big."
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    // liste des réponses
+    let answersDDay:Array = ["Yes it's true", "was too big.", "is too big.", "have too big." ]
+    let answersYesterday:Array = ["were broken.", "was too big.", "went there.", "have too big." ]
+    let answersBeforeYesterday:Array = ["were broken.", "was too big.", "is too big.", "have too big." ]
     
-    func userDidEnterData(data: String) {
-        answerText.text = data
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "validateAnswerSegue"{
-            let exercisesVC: Exercises = segue.destination as! Exercises
-            exercisesVC.delegate = self
+    static func showAnswersDay() -> String {
+//        let expectedAnswerDDay:String = "Yes it's true"
+        let answersDDay:Array = ["Yes it's true", "was too big.", "is too big.", "have too big." ]
+        
+        for answer in answersDDay{
+            return answersDDay[i]
         }
+        
     }
 }

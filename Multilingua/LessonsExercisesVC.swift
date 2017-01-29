@@ -1,5 +1,5 @@
 //
-//  LessonsExercises.swift
+//  LessonsExercisesVC.swift
 //  Multilingua
 //
 //  Created by Oliv on 23/01/2017.
@@ -8,12 +8,17 @@
 
 import UIKit
 
-class LessonsExercises: UIViewController{
+class LessonsExercisesVC: UIViewController{
     
     @IBOutlet weak var goToExercise: UIButton!
     @IBOutlet weak var lessonTextContent: UITextView!
+    var questionTextContentDay:String = Questions.showExerciseOfToday()
+    var questionTextContentYesterday:String = Questions.showExerciseOfYesterday()
+    var questionTextContentBeforeYesterday:String = Questions.showExerciseOfBeforeYesterday()
     
     var arrayOfNames = [String]()
+    
+    var segueIdentifier:String? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,18 +32,31 @@ class LessonsExercises: UIViewController{
 
     }
     
+    
     @IBAction func goToExercise(_ sender: UIButton) {
         let numberOfNames = UInt32(arrayOfNames.count)
         let randomNumber = Int(arc4random() % numberOfNames)
         let vcName = arrayOfNames[randomNumber]
-        
         let vc = storyboard?.instantiateViewController(withIdentifier: vcName)
-        navigationController?.pushViewController(vc!, animated: true)
         
+        if vc is  ExerciseViewController{
+            (vc as! ExerciseViewController).questionPassed = questionTextContentDay
+            
+        }
+        else if vc is ExerciseYesterdayVC{
+            (vc as! ExerciseYesterdayVC).questionPassed = questionTextContentYesterday
+        }
+        
+        else if vc is ExerciseBeforeYesterdayVC{
+            (vc as! ExerciseBeforeYesterdayVC).questionPassed = questionTextContentBeforeYesterday
+        }
+
+        navigationController?.pushViewController(vc!, animated: true)
+
     }
     
     func dashIconTouched(sender: UIBarButtonItem){
-        let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? Dashboard
+        let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController
         navigationController?.pushViewController(destinationViewController!, animated: true)
     }
 

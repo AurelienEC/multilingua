@@ -8,7 +8,7 @@
 import UIKit
 
 class RadioButton: UIButton {
-    var alternateButton:Array<RadioButton>?
+    var alternateButton:[RadioButton]?
     
     let checkedImage = UIImage(named: "ic_radio_button_checked")! as UIImage
     let uncheckedImage = UIImage(named: "ic_radio_button_unchecked")! as UIImage

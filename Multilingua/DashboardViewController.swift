@@ -1,5 +1,5 @@
 //
-//  Dashboard.swift
+//  DashboardViewController.swift
 //  Multilingua
 //
 //  Created by Oliv on 18/01/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Dashboard: UIViewController {
+class DashboardViewController: UIViewController {
     
     var time = Timer()
     var stringPassed = ""
@@ -22,7 +22,7 @@ class Dashboard: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Dashboard.date), userInfo: nil, repeats: true)
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(DashboardViewController.date), userInfo: nil, repeats: true)
         userLabel.text = "Bonjour, " + stringPassed
         userLabel.textAlignment = NSTextAlignment.center
     }
@@ -33,7 +33,7 @@ class Dashboard: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Tableau de Bord"
         navigationItem.hidesBackButton = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_dashboard"), style: .plain, target: Dashboard.self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_dashboard"), style: .plain, target: DashboardViewController.self, action: nil)
     }
     
     func date(){
@@ -48,7 +48,7 @@ class Dashboard: UIViewController {
         //On récupère Main.storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         //On crée une instance d'Exercice à partir du storyboard
-        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercises
+        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercisesVC
         //On montre le nouveau controller
         navigationController?.show(lessons, sender: self)
         
@@ -58,7 +58,7 @@ class Dashboard: UIViewController {
         //On récupère Main.storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         //On crée une instance d'Exercice à partir du storyboard
-        let calendar = storyboard.instantiateViewController(withIdentifier: "calendar") as! NextDates
+        let calendar = storyboard.instantiateViewController(withIdentifier: "calendar") as! NextDatesViewController
         //On montre le nouveau controller
         navigationController?.show(calendar, sender: self)
     }

@@ -10,13 +10,17 @@ import UIKit
 
 class ExerciseDay: UIViewController{
     
+    let exercise:String = ""
+    let expectedAnswer:String = ""
+    let propositions:[String] = [""]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

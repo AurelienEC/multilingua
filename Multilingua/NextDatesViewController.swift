@@ -1,5 +1,5 @@
 //
-//  NextDates.swift
+//  NextDatesViewController.swift
 //  Multilingua
 //
 //  Created by Oliv on 23/01/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NextDates: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class NextDatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet var tableView: UITableView!
     

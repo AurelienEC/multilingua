@@ -14,23 +14,23 @@
 		C5094A091E2F79FA003CEA51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5094A071E2F79FA003CEA51 /* LaunchScreen.storyboard */; };
 		C5094A141E2F79FA003CEA51 /* MultilinguaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5094A131E2F79FA003CEA51 /* MultilinguaTests.swift */; };
 		C5094A1F1E2F79FA003CEA51 /* MultilinguaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5094A1E1E2F79FA003CEA51 /* MultilinguaUITests.swift */; };
-		C5C61D0A1E2FC131000130BB /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D091E2FC131000130BB /* Dashboard.swift */; };
+		C5C61D0A1E2FC131000130BB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D091E2FC131000130BB /* DashboardViewController.swift */; };
 		C5C61D101E2FC489000130BB /* Open_Sans in Resources */ = {isa = PBXBuildFile; fileRef = C5C61D0E1E2FC489000130BB /* Open_Sans */; };
 		C5C61D111E2FC489000130BB /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = C5C61D0F1E2FC489000130BB /* Roboto */; };
-		C5C61D131E2FCA7C000130BB /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D121E2FCA7C000130BB /* SignIn.swift */; };
+		C5C61D131E2FCA7C000130BB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D121E2FCA7C000130BB /* SignInViewController.swift */; };
 		C5C61D1E1E362023000130BB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D1D1E362023000130BB /* Users.swift */; };
-		C5C61D201E3659E6000130BB /* LessonsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */; };
-		C5C61D221E3659F1000130BB /* NextDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D211E3659F1000130BB /* NextDates.swift */; };
-		C5C61D241E3659FC000130BB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D231E3659FC000130BB /* Contact.swift */; };
+		C5C61D201E3659E6000130BB /* LessonsExercisesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D1F1E3659E6000130BB /* LessonsExercisesVC.swift */; };
+		C5C61D221E3659F1000130BB /* NextDatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D211E3659F1000130BB /* NextDatesViewController.swift */; };
+		C5C61D241E3659FC000130BB /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D231E3659FC000130BB /* ContactViewController.swift */; };
 		C5C61D261E367A86000130BB /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D251E367A86000130BB /* Lessons.swift */; };
-		C5C61D281E367B24000130BB /* ExerciseDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D271E367B24000130BB /* ExerciseDay.swift */; };
-		C5C61D2A1E367B3B000130BB /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D291E367B3B000130BB /* Exercise.swift */; };
-		C5C61D2C1E367B50000130BB /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D2B1E367B50000130BB /* Exercises.swift */; };
-		C5E2D80C1E37887D009CC9EE /* ExerciseYesterday.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D80B1E37887D009CC9EE /* ExerciseYesterday.swift */; };
-		C5E2D80E1E37888C009CC9EE /* ExerciseBeforeYesterday.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterday.swift */; };
+		C5C61D2A1E367B3B000130BB /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D291E367B3B000130BB /* ExerciseViewController.swift */; };
+		C5C61D2C1E367B50000130BB /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D2B1E367B50000130BB /* Questions.swift */; };
+		C5E2D80C1E37887D009CC9EE /* ExerciseYesterdayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D80B1E37887D009CC9EE /* ExerciseYesterdayVC.swift */; };
+		C5E2D80E1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift */; };
 		C5E2D8111E38F3E2009CC9EE /* radioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8101E38F3E2009CC9EE /* radioButtons.swift */; };
 		C5E2D8131E38F3EC009CC9EE /* checkBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8121E38F3EC009CC9EE /* checkBoxes.swift */; };
-		C5E2D8151E3A411A009CC9EE /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8141E3A411A009CC9EE /* Answers.swift */; };
+		C5E2D8151E3A411A009CC9EE /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8141E3A411A009CC9EE /* AnswersViewController.swift */; };
+		C5E2D8191E3B47D2009CC9EE /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8181E3B47D2009CC9EE /* Answers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,23 +64,23 @@
 		C5094A1A1E2F79FA003CEA51 /* MultilinguaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultilinguaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5094A1E1E2F79FA003CEA51 /* MultilinguaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilinguaUITests.swift; sourceTree = "<group>"; };
 		C5094A201E2F79FA003CEA51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5C61D091E2FC131000130BB /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		C5C61D091E2FC131000130BB /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		C5C61D0E1E2FC489000130BB /* Open_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Open_Sans; sourceTree = "<group>"; };
 		C5C61D0F1E2FC489000130BB /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
-		C5C61D121E2FCA7C000130BB /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		C5C61D121E2FCA7C000130BB /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C5C61D1D1E362023000130BB /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsExercises.swift; sourceTree = "<group>"; };
-		C5C61D211E3659F1000130BB /* NextDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextDates.swift; sourceTree = "<group>"; };
-		C5C61D231E3659FC000130BB /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		C5C61D1F1E3659E6000130BB /* LessonsExercisesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsExercisesVC.swift; sourceTree = "<group>"; };
+		C5C61D211E3659F1000130BB /* NextDatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextDatesViewController.swift; sourceTree = "<group>"; };
+		C5C61D231E3659FC000130BB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		C5C61D251E367A86000130BB /* Lessons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
-		C5C61D271E367B24000130BB /* ExerciseDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDay.swift; sourceTree = "<group>"; };
-		C5C61D291E367B3B000130BB /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		C5C61D2B1E367B50000130BB /* Exercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
-		C5E2D80B1E37887D009CC9EE /* ExerciseYesterday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseYesterday.swift; sourceTree = "<group>"; };
-		C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseBeforeYesterday.swift; sourceTree = "<group>"; };
+		C5C61D291E367B3B000130BB /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		C5C61D2B1E367B50000130BB /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		C5E2D80B1E37887D009CC9EE /* ExerciseYesterdayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseYesterdayVC.swift; sourceTree = "<group>"; };
+		C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseBeforeYesterdayVC.swift; sourceTree = "<group>"; };
 		C5E2D8101E38F3E2009CC9EE /* radioButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = radioButtons.swift; sourceTree = "<group>"; };
 		C5E2D8121E38F3EC009CC9EE /* checkBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkBoxes.swift; sourceTree = "<group>"; };
-		C5E2D8141E3A411A009CC9EE /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
+		C5E2D8141E3A411A009CC9EE /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
+		C5E2D8181E3B47D2009CC9EE /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,14 +166,13 @@
 		C5C61D0B1E2FC137000130BB /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C5E2D8141E3A411A009CC9EE /* Answers.swift */,
-				C5C61D231E3659FC000130BB /* Contact.swift */,
-				C5C61D091E2FC131000130BB /* Dashboard.swift */,
-				C5C61D291E367B3B000130BB /* Exercise.swift */,
+				C5E2D8141E3A411A009CC9EE /* AnswersViewController.swift */,
+				C5C61D231E3659FC000130BB /* ContactViewController.swift */,
+				C5C61D091E2FC131000130BB /* DashboardViewController.swift */,
 				C5E2D80A1E378863009CC9EE /* exercises */,
-				C5C61D1F1E3659E6000130BB /* LessonsExercises.swift */,
-				C5C61D211E3659F1000130BB /* NextDates.swift */,
-				C5C61D121E2FCA7C000130BB /* SignIn.swift */,
+				C5C61D1F1E3659E6000130BB /* LessonsExercisesVC.swift */,
+				C5C61D211E3659F1000130BB /* NextDatesViewController.swift */,
+				C5C61D121E2FCA7C000130BB /* SignInViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -192,7 +191,8 @@
 			children = (
 				C5C61D1D1E362023000130BB /* Users.swift */,
 				C5C61D251E367A86000130BB /* Lessons.swift */,
-				C5C61D2B1E367B50000130BB /* Exercises.swift */,
+				C5C61D2B1E367B50000130BB /* Questions.swift */,
+				C5E2D8181E3B47D2009CC9EE /* Answers.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 		C5E2D80A1E378863009CC9EE /* exercises */ = {
 			isa = PBXGroup;
 			children = (
-				C5C61D271E367B24000130BB /* ExerciseDay.swift */,
-				C5E2D80B1E37887D009CC9EE /* ExerciseYesterday.swift */,
-				C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterday.swift */,
+				C5C61D291E367B3B000130BB /* ExerciseViewController.swift */,
+				C5E2D80B1E37887D009CC9EE /* ExerciseYesterdayVC.swift */,
+				C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift */,
 			);
 			name = exercises;
 			sourceTree = "<group>";
@@ -353,22 +353,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C61D261E367A86000130BB /* Lessons.swift in Sources */,
-				C5C61D2C1E367B50000130BB /* Exercises.swift in Sources */,
+				C5C61D2C1E367B50000130BB /* Questions.swift in Sources */,
 				C5094A011E2F79FA003CEA51 /* ViewController.swift in Sources */,
-				C5C61D0A1E2FC131000130BB /* Dashboard.swift in Sources */,
+				C5C61D0A1E2FC131000130BB /* DashboardViewController.swift in Sources */,
 				C5C61D1E1E362023000130BB /* Users.swift in Sources */,
-				C5E2D80E1E37888C009CC9EE /* ExerciseBeforeYesterday.swift in Sources */,
+				C5E2D80E1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift in Sources */,
 				C50949FF1E2F79FA003CEA51 /* AppDelegate.swift in Sources */,
-				C5C61D281E367B24000130BB /* ExerciseDay.swift in Sources */,
-				C5C61D2A1E367B3B000130BB /* Exercise.swift in Sources */,
-				C5C61D241E3659FC000130BB /* Contact.swift in Sources */,
+				C5C61D2A1E367B3B000130BB /* ExerciseViewController.swift in Sources */,
+				C5C61D241E3659FC000130BB /* ContactViewController.swift in Sources */,
 				C5E2D8131E38F3EC009CC9EE /* checkBoxes.swift in Sources */,
 				C5E2D8111E38F3E2009CC9EE /* radioButtons.swift in Sources */,
-				C5C61D131E2FCA7C000130BB /* SignIn.swift in Sources */,
-				C5E2D8151E3A411A009CC9EE /* Answers.swift in Sources */,
-				C5E2D80C1E37887D009CC9EE /* ExerciseYesterday.swift in Sources */,
-				C5C61D201E3659E6000130BB /* LessonsExercises.swift in Sources */,
-				C5C61D221E3659F1000130BB /* NextDates.swift in Sources */,
+				C5C61D131E2FCA7C000130BB /* SignInViewController.swift in Sources */,
+				C5E2D8191E3B47D2009CC9EE /* Answers.swift in Sources */,
+				C5E2D8151E3A411A009CC9EE /* AnswersViewController.swift in Sources */,
+				C5E2D80C1E37887D009CC9EE /* ExerciseYesterdayVC.swift in Sources */,
+				C5C61D201E3659E6000130BB /* LessonsExercisesVC.swift in Sources */,
+				C5C61D221E3659F1000130BB /* NextDatesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

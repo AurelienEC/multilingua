@@ -1,5 +1,5 @@
 //
-//  Contact.swift
+//  ContactViewController.swift
 //  Multilingua
 //
 //  Created by Oliv on 23/01/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Contact: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ContactViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var notificationButton: UIButton!
@@ -45,6 +45,12 @@ class Contact: UIViewController, UITableViewDataSource, UITableViewDelegate{
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(contactTypes[indexPath.row])
+
+    }
+
     
     func notifications(sender: UIButton){
         
