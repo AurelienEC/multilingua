@@ -11,6 +11,12 @@ import UIKit
 class ExerciseViewController: UIViewController{
     
     var questionPassed: String = ""
+    var answerText1Passed:String = ""
+    var answerText2Passed:String = ""
+    var answerText3Passed:String = ""
+    var answerText4Passed:String = ""
+    
+    var expectedAnswerDay = Answers.getExpectedAnswerDDay()
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -33,13 +39,17 @@ class ExerciseViewController: UIViewController{
         answer2?.alternateButton = [answer1!, answer3!, answer4!]
         answer3?.alternateButton = [answer1!, answer2!, answer4!]
         answer4?.alternateButton = [answer1!, answer2!, answer3!]
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         self.questionLabel.text = "Question : " + questionPassed
         questionLabel.textAlignment = NSTextAlignment.center
+        self.answerText1.text = answerText1Passed
+        self.answerText2.text = answerText2Passed
+        self.answerText3.text = answerText3Passed
+        self.answerText4.text = answerText4Passed
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,8 +69,23 @@ class ExerciseViewController: UIViewController{
         answerText1.text = data
     }
     
-    func checkAnswer(sender: RadioButton){
-        
+    func checkAnswer(sender: RadioButton) -> Bool{
+        if answer1.isSelected == true {
+            if answerText1Passed == expectedAnswerDay{
+                return true
+            }
+            else{
+                //alert
+                let alertController = UIAlertController(title: "Mauvaise Réponse", message: "Dommage, ce n'était pas labonne réponse", preferredStyle: .alert)
+
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+
+                alertController.addAction(defaultAction)
+
+                present(alertController, animated: true, completion: nil)
+            }
+        }
+        return false
     }
     
     func validateButtonTapped(sender: UIButton){

@@ -13,8 +13,11 @@ class LessonsExercisesVC: UIViewController{
     @IBOutlet weak var goToExercise: UIButton!
     @IBOutlet weak var lessonTextContent: UITextView!
     var questionTextContentDay:String = Questions.showExerciseOfToday()
+    var answersDDay:Array = Answers.showAnswersDay()
     var questionTextContentYesterday:String = Questions.showExerciseOfYesterday()
+    var answersYesterday:Array = Answers.showAnswersYesterday()
     var questionTextContentBeforeYesterday:String = Questions.showExerciseOfBeforeYesterday()
+    var answersBeforeYesterday:Array = Answers.showAnswersBeforeYesterday()
     
     var arrayOfNames = [String]()
     
@@ -41,30 +44,32 @@ class LessonsExercisesVC: UIViewController{
         
         if vc is  ExerciseViewController{
             (vc as! ExerciseViewController).questionPassed = questionTextContentDay
-            
+            (vc as! ExerciseViewController).answerText1Passed = answersDDay[0] as! String
+            (vc as! ExerciseViewController).answerText2Passed = answersDDay[1] as! String
+            (vc as! ExerciseViewController).answerText3Passed = answersDDay[2] as! String
+            (vc as! ExerciseViewController).answerText4Passed = answersDDay[3] as! String
         }
         else if vc is ExerciseYesterdayVC{
             (vc as! ExerciseYesterdayVC).questionPassed = questionTextContentYesterday
+            (vc as! ExerciseYesterdayVC).answerText1Passed = answersYesterday[0] as! String
+            (vc as! ExerciseYesterdayVC).answerText2Passed = answersYesterday[1] as! String
+            (vc as! ExerciseYesterdayVC).answerText3Passed = answersYesterday[2] as! String
+            (vc as! ExerciseYesterdayVC).answerText4Passed = answersYesterday[3] as! String
         }
         
         else if vc is ExerciseBeforeYesterdayVC{
             (vc as! ExerciseBeforeYesterdayVC).questionPassed = questionTextContentBeforeYesterday
+            (vc as! ExerciseBeforeYesterdayVC).answerText1Passed = answersBeforeYesterday[0] as! String
+            (vc as! ExerciseBeforeYesterdayVC).answerText2Passed = answersBeforeYesterday[1] as! String
+            (vc as! ExerciseBeforeYesterdayVC).answerText3Passed = answersBeforeYesterday[2] as! String
+            (vc as! ExerciseBeforeYesterdayVC).answerText4Passed = answersBeforeYesterday[3] as! String
         }
 
         navigationController?.pushViewController(vc!, animated: true)
-
     }
     
     func dashIconTouched(sender: UIBarButtonItem){
         let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController
         navigationController?.pushViewController(destinationViewController!, animated: true)
-    }
-
-    
-    func showLesson(_ sender: UITextView){
-
-        
-    }
-    
-    
+    }    
 }

@@ -11,6 +11,10 @@ import UIKit
 class ExerciseBeforeYesterdayVC: UIViewController{
     
     var questionPassed: String = ""
+    var answerText1Passed:String = ""
+    var answerText2Passed:String = ""
+    var answerText3Passed:String = ""
+    var answerText4Passed:String = ""
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -40,6 +44,10 @@ class ExerciseBeforeYesterdayVC: UIViewController{
         
         self.questionLabel.text = "Question : " + questionPassed
         questionLabel.textAlignment = NSTextAlignment.center
+        self.answerText1.text = answerText1Passed
+        self.answerText2.text = answerText2Passed
+        self.answerText3.text = answerText3Passed
+        self.answerText4.text = answerText4Passed
     }
     
     override func didReceiveMemoryWarning() {
