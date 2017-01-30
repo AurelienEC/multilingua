@@ -308,21 +308,33 @@
                                 <rect key="frame" x="324" y="262" width="35" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="Gvs-Wi-eEI" eventType="touchUpInside" id="c0h-OH-ILD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmn-XQ-ON7" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
                                 <rect key="frame" x="324" y="320" width="35" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="Gvs-Wi-eEI" eventType="touchUpInside" id="ERJ-0n-ljl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc3-x9-Q50" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
                                 <rect key="frame" x="324" y="374" width="35" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="Gvs-Wi-eEI" eventType="touchUpInside" id="Hja-FM-GX1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zaf-gz-Rbs" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
                                 <rect key="frame" x="324" y="428" width="35" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="Gvs-Wi-eEI" eventType="touchUpInside" id="eM5-Se-pxx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

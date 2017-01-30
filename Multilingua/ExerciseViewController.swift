@@ -29,12 +29,12 @@ class ExerciseViewController: UIViewController{
     @IBOutlet weak var answerText2: UILabel!
     @IBOutlet weak var answerText3: UILabel!
     @IBOutlet weak var answerText4: UILabel!
-
+    
     @IBOutlet weak var validateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         answer1?.alternateButton = [answer2!, answer3!, answer4!]
         answer2?.alternateButton = [answer1!, answer3!, answer4!]
         answer3?.alternateButton = [answer1!, answer2!, answer4!]
@@ -68,30 +68,29 @@ class ExerciseViewController: UIViewController{
     func userDidEnterData(data:String){
         answerText1.text = data
     }
+
+    @IBAction func checkAnswer(_ sender: RadioButton) {
+        
+        switch sender{
+        case answer1:
+                print("Answer1 is selected")
+//            let answerUser = answer
+            
+        case answer2:
+                print("Answer2 Selected")
+            
+        case answer3:
+                print("Answer3 Selected")
+            
+        case answer4:
+                print("Answer4 Selected")
+        default:
+                print("Another answer is selected")
     
-    func checkAnswer(sender: RadioButton) -> Bool{
-        if answer1.isSelected == true {
-            if answerText1Passed == expectedAnswerDay{
-                return true
-            }
-            else{
-                //alert
-                let alertController = UIAlertController(title: "Mauvaise Réponse", message: "Dommage, ce n'était pas labonne réponse", preferredStyle: .alert)
-
-                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-
-                alertController.addAction(defaultAction)
-
-                present(alertController, animated: true, completion: nil)
-            }
         }
-        return false
     }
     
     func validateButtonTapped(sender: UIButton){
-        
+    
     }
-    
-    
-    
 }
