@@ -261,8 +261,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0Z-jv-zg2">
-                                <rect key="frame" x="16" y="117" width="343" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0Z-jv-zg2">
+                                <rect key="frame" x="16" y="117" width="343" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -301,7 +301,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Valider"/>
                                 <connections>
-                                    <segue destination="UaP-Gi-sEI" kind="show" identifier="validateAnswerSegue" id="aF5-sy-owX"/>
+                                    <segue destination="j3t-IM-E2A" kind="show" id="Rr9-8t-T5E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVL-97-oWH" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
@@ -340,10 +340,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="answer1" destination="sVL-97-oWH" id="DaS-al-1sh"/>
-                        <outlet property="answer2" destination="fmn-XQ-ON7" id="bmK-AI-vQI"/>
-                        <outlet property="answer3" destination="gc3-x9-Q50" id="Wbb-yK-7xo"/>
-                        <outlet property="answer4" destination="Zaf-gz-Rbs" id="L5H-ib-4Sz"/>
+                        <outlet property="answer1" destination="sVL-97-oWH" id="0Qh-Ed-dt4"/>
+                        <outlet property="answer2" destination="fmn-XQ-ON7" id="6Rz-OM-sRs"/>
+                        <outlet property="answer3" destination="gc3-x9-Q50" id="RpA-yV-QG7"/>
+                        <outlet property="answer4" destination="Zaf-gz-Rbs" id="oVa-4r-1A9"/>
                         <outlet property="answerText1" destination="1SS-tp-jlI" id="RoQ-zB-cJf"/>
                         <outlet property="answerText2" destination="YLJ-85-OGp" id="PMT-hM-ihx"/>
                         <outlet property="answerText3" destination="3MI-dF-mGX" id="xKz-4m-mIN"/>
@@ -355,236 +355,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oz5-Z6-3dG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3413.5999999999999" y="36.431784107946029"/>
-        </scene>
-        <!--Exercise Before YesterdayVC-->
-        <scene sceneID="bDj-CA-Laj">
-            <objects>
-                <viewController storyboardIdentifier="exerciseBeforeYesterday" id="w1E-zY-Ml7" customClass="ExerciseBeforeYesterdayVC" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ond-j0-YyD"/>
-                        <viewControllerLayoutGuide type="bottom" id="cOg-cV-eiK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3YL-sO-Mbb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercice d'Avant-Hier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCX-Ul-evW">
-                                <rect key="frame" x="126" y="92" width="122" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="6ff-D6-ZLc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wld-kG-X9P">
-                                <rect key="frame" x="16" y="133" width="343" height="129"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="129" id="SSA-Uo-aTD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réponse 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-kF-U7c">
-                                <rect key="frame" x="69" y="281" width="247" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réponse 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az7-nf-Mbv">
-                                <rect key="frame" x="69" y="339" width="247" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="247" id="wTN-1F-B1x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réponse 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywG-pX-Pqw">
-                                <rect key="frame" x="69" y="393" width="247" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réponse 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJJ-Mk-GVX">
-                                <rect key="frame" x="69" y="447" width="247" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wne-up-AX3">
-                                <rect key="frame" x="110" y="534" width="155" height="41"/>
-                                <state key="normal" title="Valider"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKf-OS-U5X" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
-                                <rect key="frame" x="324" y="278" width="35" height="24"/>
-                                <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzE-SG-9RQ" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
-                                <rect key="frame" x="324" y="336" width="35" height="24"/>
-                                <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwe-hU-LXE" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
-                                <rect key="frame" x="324" y="390" width="35" height="24"/>
-                                <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14z-eT-CBw" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
-                                <rect key="frame" x="324" y="444" width="35" height="24"/>
-                                <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="az7-nf-Mbv" secondAttribute="bottom" constant="307" id="0O0-El-NfL"/>
-                            <constraint firstItem="14z-eT-CBw" firstAttribute="trailing" secondItem="mzE-SG-9RQ" secondAttribute="trailing" id="0X3-qo-1jz"/>
-                            <constraint firstItem="az7-nf-Mbv" firstAttribute="trailing" secondItem="cSV-kF-U7c" secondAttribute="trailing" id="32g-Lc-8ic"/>
-                            <constraint firstItem="14z-eT-CBw" firstAttribute="trailing" secondItem="3YL-sO-Mbb" secondAttribute="trailingMargin" id="3OV-2v-UH3"/>
-                            <constraint firstItem="wld-kG-X9P" firstAttribute="leading" secondItem="3YL-sO-Mbb" secondAttribute="leadingMargin" id="5Pr-Fa-rRO"/>
-                            <constraint firstItem="cOg-cV-eiK" firstAttribute="top" secondItem="14z-eT-CBw" secondAttribute="bottom" constant="199" id="8jM-iV-Sei"/>
-                            <constraint firstItem="az7-nf-Mbv" firstAttribute="bottom" secondItem="mzE-SG-9RQ" secondAttribute="bottom" id="Hho-sa-kMH"/>
-                            <constraint firstItem="ywG-pX-Pqw" firstAttribute="top" secondItem="az7-nf-Mbv" secondAttribute="bottom" constant="33" id="Lss-B1-YyM"/>
-                            <constraint firstItem="wld-kG-X9P" firstAttribute="centerX" secondItem="Wne-up-AX3" secondAttribute="centerX" id="OFY-6v-XHM"/>
-                            <constraint firstItem="wld-kG-X9P" firstAttribute="top" secondItem="bCX-Ul-evW" secondAttribute="bottom" constant="20" id="QXz-c1-BHq"/>
-                            <constraint firstItem="az7-nf-Mbv" firstAttribute="top" secondItem="cSV-kF-U7c" secondAttribute="bottom" constant="37" id="SR1-Fg-9wQ"/>
-                            <constraint firstItem="Wne-up-AX3" firstAttribute="top" secondItem="jJJ-Mk-GVX" secondAttribute="bottom" constant="66" id="UQo-eE-ZAM"/>
-                            <constraint firstItem="ZKf-OS-U5X" firstAttribute="leading" secondItem="cSV-kF-U7c" secondAttribute="trailing" constant="8" id="VZf-DW-Ivx"/>
-                            <constraint firstItem="14z-eT-CBw" firstAttribute="trailing" secondItem="ZKf-OS-U5X" secondAttribute="trailing" id="WTV-mD-Rfd"/>
-                            <constraint firstItem="mzE-SG-9RQ" firstAttribute="leading" secondItem="az7-nf-Mbv" secondAttribute="trailing" constant="8" id="Wat-Sa-NGB"/>
-                            <constraint firstItem="az7-nf-Mbv" firstAttribute="trailing" secondItem="ywG-pX-Pqw" secondAttribute="trailing" id="Xwo-1d-0HG"/>
-                            <constraint firstItem="bCX-Ul-evW" firstAttribute="centerX" secondItem="wld-kG-X9P" secondAttribute="centerX" id="ZmZ-xA-YuM"/>
-                            <constraint firstItem="az7-nf-Mbv" firstAttribute="leading" secondItem="3YL-sO-Mbb" secondAttribute="leadingMargin" constant="53" id="cOB-QD-eEL"/>
-                            <constraint firstItem="wld-kG-X9P" firstAttribute="trailing" secondItem="ZKf-OS-U5X" secondAttribute="trailing" id="cSL-TC-gco"/>
-                            <constraint firstItem="cSV-kF-U7c" firstAttribute="leading" secondItem="3YL-sO-Mbb" secondAttribute="leadingMargin" constant="53" id="cy8-zs-lF1"/>
-                            <constraint firstItem="jJJ-Mk-GVX" firstAttribute="leading" secondItem="3YL-sO-Mbb" secondAttribute="leadingMargin" constant="53" id="d5j-j5-1Fy"/>
-                            <constraint firstItem="Hwe-hU-LXE" firstAttribute="leading" secondItem="ywG-pX-Pqw" secondAttribute="trailing" constant="8" id="e8i-6Y-qQC"/>
-                            <constraint firstItem="ZKf-OS-U5X" firstAttribute="top" secondItem="wld-kG-X9P" secondAttribute="bottom" constant="16" id="f1V-7t-0Uk"/>
-                            <constraint firstItem="az7-nf-Mbv" firstAttribute="trailing" secondItem="jJJ-Mk-GVX" secondAttribute="trailing" id="fE8-NL-93I"/>
-                            <constraint firstItem="cOg-cV-eiK" firstAttribute="top" secondItem="Wne-up-AX3" secondAttribute="bottom" constant="92" id="gne-d3-vKE"/>
-                            <constraint firstItem="14z-eT-CBw" firstAttribute="leading" secondItem="jJJ-Mk-GVX" secondAttribute="trailing" constant="8" id="n7T-gp-BPE"/>
-                            <constraint firstItem="Wne-up-AX3" firstAttribute="leading" secondItem="3YL-sO-Mbb" secondAttribute="leadingMargin" constant="94" id="o53-8J-ehE"/>
-                            <constraint firstItem="ZKf-OS-U5X" firstAttribute="bottom" secondItem="cSV-kF-U7c" secondAttribute="bottom" id="q26-Uc-0MM"/>
-                            <constraint firstItem="14z-eT-CBw" firstAttribute="trailing" secondItem="Hwe-hU-LXE" secondAttribute="trailing" id="t0D-ZY-inU"/>
-                            <constraint firstItem="14z-eT-CBw" firstAttribute="top" secondItem="Hwe-hU-LXE" secondAttribute="bottom" constant="30" id="u2l-FS-n18"/>
-                            <constraint firstItem="ywG-pX-Pqw" firstAttribute="leading" secondItem="3YL-sO-Mbb" secondAttribute="leadingMargin" constant="53" id="vpl-fu-aXe"/>
-                            <constraint firstItem="14z-eT-CBw" firstAttribute="bottom" secondItem="jJJ-Mk-GVX" secondAttribute="bottom" id="x6X-ov-n2s"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="answer1" destination="ZKf-OS-U5X" id="TJz-cJ-VTL"/>
-                        <outlet property="answer2" destination="mzE-SG-9RQ" id="vuw-6N-XDn"/>
-                        <outlet property="answer3" destination="Hwe-hU-LXE" id="9Ek-7h-npU"/>
-                        <outlet property="answer4" destination="14z-eT-CBw" id="ged-0g-Tlg"/>
-                        <outlet property="answerText1" destination="cSV-kF-U7c" id="ByF-Pe-MzN"/>
-                        <outlet property="answerText2" destination="az7-nf-Mbv" id="Ze1-3e-0Ov"/>
-                        <outlet property="answerText3" destination="ywG-pX-Pqw" id="sKF-nd-MOb"/>
-                        <outlet property="answerText4" destination="jJJ-Mk-GVX" id="Ykf-5d-KT5"/>
-                        <outlet property="questionLabel" destination="wld-kG-X9P" id="RQy-pk-nKJ"/>
-                        <outlet property="validateButton" destination="Wne-up-AX3" id="EU3-lq-cl7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="spx-Zf-wiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3764" y="764.16791604197908"/>
-        </scene>
-        <!--Exercise YesterdayVC-->
-        <scene sceneID="Op4-gQ-vRE">
-            <objects>
-                <viewController storyboardIdentifier="exerciseYesterday" id="xL9-mE-8hd" customClass="ExerciseYesterdayVC" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nbi-33-PeJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="L6u-km-JO0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ihf-pB-0pJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercice d'Hier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulQ-F2-RWz">
-                                <rect key="frame" x="126" y="92" width="122" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lht-Sn-7iY">
-                                <rect key="frame" x="16" y="133" width="343" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Réponse 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxO-7f-S5M">
-                                <rect key="frame" x="69" y="281" width="247" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Réponse 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbl-pE-69X">
-                                <rect key="frame" x="69" y="339" width="247" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Réponse 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXC-LZ-hxM">
-                                <rect key="frame" x="69" y="393" width="247" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Réponse 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyL-42-Ts3">
-                                <rect key="frame" x="69" y="447" width="247" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BB-fQ-hg1">
-                                <rect key="frame" x="110" y="534" width="155" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Valider"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2z-DY-PyI" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
-                                <rect key="frame" x="324" y="278" width="35" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCn-q3-v0B" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
-                                <rect key="frame" x="324" y="336" width="35" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhL-6o-nl7" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
-                                <rect key="frame" x="324" y="390" width="35" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE6-sl-sfd" customClass="RadioButton" customModule="Multilingua" customModuleProvider="target">
-                                <rect key="frame" x="324" y="444" width="35" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="ic_radio_button_unchecked"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="answer1" destination="L2z-DY-PyI" id="YVG-Fq-lNn"/>
-                        <outlet property="answer2" destination="KCn-q3-v0B" id="XRf-Ki-hgj"/>
-                        <outlet property="answer3" destination="qhL-6o-nl7" id="oCp-fA-dWJ"/>
-                        <outlet property="answer4" destination="JE6-sl-sfd" id="meT-Lf-SSo"/>
-                        <outlet property="answerText1" destination="LxO-7f-S5M" id="j12-hI-EOb"/>
-                        <outlet property="answerText2" destination="Dbl-pE-69X" id="RHU-Ng-Hao"/>
-                        <outlet property="answerText3" destination="gXC-LZ-hxM" id="8Qf-uZ-VeS"/>
-                        <outlet property="answerText4" destination="fyL-42-Ts3" id="Lay-od-R5r"/>
-                        <outlet property="questionLabel" destination="Lht-Sn-7iY" id="1si-6a-IDV"/>
-                        <outlet property="validateButton" destination="3BB-fQ-hg1" id="4Z3-93-uOA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mZM-Iw-uSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4548" y="240"/>
         </scene>
         <!--Answers View Controller-->
         <scene sceneID="dbx-c2-eVS">
@@ -614,7 +384,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG5-sq-Mae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4266" y="-470"/>
+            <point key="canvasLocation" x="5004" y="37"/>
+        </scene>
+        <!--Second ExerciseVC-->
+        <scene sceneID="HgI-W2-64q">
+            <objects>
+                <viewController id="j3t-IM-E2A" customClass="SecondExerciseVC" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nb4-kQ-zNU"/>
+                        <viewControllerLayoutGuide type="bottom" id="ktC-9H-EZn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M2q-aN-0QD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="UaP-Gi-sEI" kind="show" identifier="showAnswerSegue" id="zuo-AT-hhv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qf8-cn-F5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4271" y="37"/>
         </scene>
         <!--Lessons ExercisesVC-->
         <scene sceneID="t68-4K-DXy">
@@ -643,7 +434,7 @@
                                 </constraints>
                                 <state key="normal" title="Passer à l'exercice"/>
                                 <connections>
-                                    <action selector="goToExercise:" destination="Xs9-U1-mYs" eventType="touchUpInside" id="36H-T3-3mI"/>
+                                    <action selector="goToExercise:" destination="Xs9-U1-mYs" eventType="touchUpInside" id="M4D-11-roL"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BwR-AY-KQH">
@@ -671,8 +462,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="goToExercise" destination="BZn-hN-M0Q" id="8oj-wg-UuP"/>
+                        <outlet property="goToExercise" destination="BZn-hN-M0Q" id="Wr3-ZY-aIJ"/>
                         <outlet property="lessonTextContent" destination="BwR-AY-KQH" id="gBI-vd-Ej5"/>
+                        <outlet property="lessonTextTitle" destination="zhm-wn-ove" id="h6q-sh-8Bz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGn-8D-rI9" userLabel="First Responder" sceneMemberID="firstResponder"/>

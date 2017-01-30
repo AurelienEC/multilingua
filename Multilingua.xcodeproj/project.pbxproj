@@ -24,13 +24,10 @@
 		C5C61D241E3659FC000130BB /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D231E3659FC000130BB /* ContactViewController.swift */; };
 		C5C61D261E367A86000130BB /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D251E367A86000130BB /* Lessons.swift */; };
 		C5C61D2A1E367B3B000130BB /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D291E367B3B000130BB /* ExerciseViewController.swift */; };
-		C5C61D2C1E367B50000130BB /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C61D2B1E367B50000130BB /* Questions.swift */; };
-		C5E2D80C1E37887D009CC9EE /* ExerciseYesterdayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D80B1E37887D009CC9EE /* ExerciseYesterdayVC.swift */; };
-		C5E2D80E1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift */; };
 		C5E2D8111E38F3E2009CC9EE /* radioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8101E38F3E2009CC9EE /* radioButtons.swift */; };
 		C5E2D8131E38F3EC009CC9EE /* checkBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8121E38F3EC009CC9EE /* checkBoxes.swift */; };
 		C5E2D8151E3A411A009CC9EE /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8141E3A411A009CC9EE /* AnswersViewController.swift */; };
-		C5E2D8191E3B47D2009CC9EE /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8181E3B47D2009CC9EE /* Answers.swift */; };
+		C5F77EDA1E3F90EE001E24FE /* SecondExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F77ED91E3F90EE001E24FE /* SecondExerciseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,13 +71,10 @@
 		C5C61D231E3659FC000130BB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		C5C61D251E367A86000130BB /* Lessons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		C5C61D291E367B3B000130BB /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
-		C5C61D2B1E367B50000130BB /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
-		C5E2D80B1E37887D009CC9EE /* ExerciseYesterdayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseYesterdayVC.swift; sourceTree = "<group>"; };
-		C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseBeforeYesterdayVC.swift; sourceTree = "<group>"; };
 		C5E2D8101E38F3E2009CC9EE /* radioButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = radioButtons.swift; sourceTree = "<group>"; };
 		C5E2D8121E38F3EC009CC9EE /* checkBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkBoxes.swift; sourceTree = "<group>"; };
 		C5E2D8141E3A411A009CC9EE /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
-		C5E2D8181E3B47D2009CC9EE /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
+		C5F77ED91E3F90EE001E24FE /* SecondExerciseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondExerciseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +185,6 @@
 			children = (
 				C5C61D1D1E362023000130BB /* Users.swift */,
 				C5C61D251E367A86000130BB /* Lessons.swift */,
-				C5C61D2B1E367B50000130BB /* Questions.swift */,
-				C5E2D8181E3B47D2009CC9EE /* Answers.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -201,8 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				C5C61D291E367B3B000130BB /* ExerciseViewController.swift */,
-				C5E2D80B1E37887D009CC9EE /* ExerciseYesterdayVC.swift */,
-				C5E2D80D1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift */,
+				C5F77ED91E3F90EE001E24FE /* SecondExerciseVC.swift */,
 			);
 			name = exercises;
 			sourceTree = "<group>";
@@ -353,20 +344,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C61D261E367A86000130BB /* Lessons.swift in Sources */,
-				C5C61D2C1E367B50000130BB /* Questions.swift in Sources */,
 				C5094A011E2F79FA003CEA51 /* ViewController.swift in Sources */,
 				C5C61D0A1E2FC131000130BB /* DashboardViewController.swift in Sources */,
 				C5C61D1E1E362023000130BB /* Users.swift in Sources */,
-				C5E2D80E1E37888C009CC9EE /* ExerciseBeforeYesterdayVC.swift in Sources */,
 				C50949FF1E2F79FA003CEA51 /* AppDelegate.swift in Sources */,
 				C5C61D2A1E367B3B000130BB /* ExerciseViewController.swift in Sources */,
 				C5C61D241E3659FC000130BB /* ContactViewController.swift in Sources */,
 				C5E2D8131E38F3EC009CC9EE /* checkBoxes.swift in Sources */,
 				C5E2D8111E38F3E2009CC9EE /* radioButtons.swift in Sources */,
 				C5C61D131E2FCA7C000130BB /* SignInViewController.swift in Sources */,
-				C5E2D8191E3B47D2009CC9EE /* Answers.swift in Sources */,
+				C5F77EDA1E3F90EE001E24FE /* SecondExerciseVC.swift in Sources */,
 				C5E2D8151E3A411A009CC9EE /* AnswersViewController.swift in Sources */,
-				C5E2D80C1E37887D009CC9EE /* ExerciseYesterdayVC.swift in Sources */,
 				C5C61D201E3659E6000130BB /* LessonsExercisesVC.swift in Sources */,
 				C5C61D221E3659F1000130BB /* NextDatesViewController.swift in Sources */,
 			);

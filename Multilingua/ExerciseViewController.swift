@@ -10,13 +10,15 @@ import UIKit
 
 class ExerciseViewController: UIViewController{
     
-    var questionPassed: String = ""
-    var answerText1Passed:String = ""
-    var answerText2Passed:String = ""
-    var answerText3Passed:String = ""
-    var answerText4Passed:String = ""
+    var lesson:Lesson!
     
-    var expectedAnswerDay = Answers.getExpectedAnswerDDay()
+    var questionPassed: String = ""
+//    var answerText1Passed:String = ""
+//    var answerText2Passed:String = ""
+//    var answerText3Passed:String = ""
+//    var answerText4Passed:String = ""
+//    
+    var answersTextPassed:Array = [""]
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -39,17 +41,17 @@ class ExerciseViewController: UIViewController{
         answer2?.alternateButton = [answer1!, answer3!, answer4!]
         answer3?.alternateButton = [answer1!, answer2!, answer4!]
         answer4?.alternateButton = [answer1!, answer2!, answer3!]
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.questionLabel.text = "Question : " + questionPassed
         questionLabel.textAlignment = NSTextAlignment.center
-        self.answerText1.text = answerText1Passed
-        self.answerText2.text = answerText2Passed
-        self.answerText3.text = answerText3Passed
-        self.answerText4.text = answerText4Passed
+        self.answerText1.text = lesson.exercises[0].answers[0].value
+        self.answerText2.text = lesson.exercises[0].answers[1].value
+        self.answerText3.text = lesson.exercises[0].answers[2].value
+        self.answerText4.text = lesson.exercises[0].answers[3].value
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,18 +59,14 @@ class ExerciseViewController: UIViewController{
     }
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         self.view.layoutIfNeeded()
-        
         answer1.isSelected = true
         answer2.isSelected = false
         answer3.isSelected = false
         answer4.isSelected = false
     }
     
-    func userDidEnterData(data:String){
-        answerText1.text = data
-    }
-
     @IBAction func checkAnswer(_ sender: RadioButton) {
         
         switch sender{
@@ -93,4 +91,8 @@ class ExerciseViewController: UIViewController{
     func validateButtonTapped(sender: UIButton){
     
     }
+    
+//    func getLesson() -> Lesson{
+//        
+//    }
 }
