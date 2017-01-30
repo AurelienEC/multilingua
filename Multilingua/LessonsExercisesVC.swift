@@ -40,8 +40,8 @@ class LessonsExercisesVC: UIViewController{
         let vcName = "exerciseDay"
 //        let randomExercise = Int(arc4random_uniform(UInt32(Lessons.allLessons[randomIndex].exercises.count)))
         let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! ExerciseViewController
-        vc.lesson = Lessons.allLessons[randomIndex]
-        vc.questionPassed = Lessons.allLessons[randomIndex].exercises[0].question
+        vc.lesson = Lessons.allLessons[0]
+        vc.questionPassed = Lessons.allLessons[0].exercises[0].question
 
 //        let sfd:String = vc.lesson.exercises[0].answers[1].value
         navigationController?.pushViewController(vc, animated: true)

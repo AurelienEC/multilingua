@@ -13,11 +13,7 @@ class ExerciseViewController: UIViewController{
     var lesson:Lesson!
     
     var questionPassed: String = ""
-//    var answerText1Passed:String = ""
-//    var answerText2Passed:String = ""
-//    var answerText3Passed:String = ""
-//    var answerText4Passed:String = ""
-//    
+   
     var answersTextPassed:Array = [""]
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -33,9 +29,13 @@ class ExerciseViewController: UIViewController{
     @IBOutlet weak var answerText4: UILabel!
     
     @IBOutlet weak var validateButton: UIButton!
+    var selectedAnswer: String?
+    var pointsCounter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        validateButton.layer.cornerRadius = 5
         
         answer1?.alternateButton = [answer2!, answer3!, answer4!]
         answer2?.alternateButton = [answer1!, answer3!, answer4!]
@@ -45,6 +45,7 @@ class ExerciseViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true // pour bloquer le retour en arrière
         
         self.questionLabel.text = "Question : " + questionPassed
         questionLabel.textAlignment = NSTextAlignment.center
@@ -68,31 +69,73 @@ class ExerciseViewController: UIViewController{
     }
     
     @IBAction func checkAnswer(_ sender: RadioButton) {
+
         
         switch sender{
         case answer1:
                 print("Answer1 is selected")
-//            let answerUser = answer
-            
+                if answerText1.text == lesson.exercises[0].expectedAnswer.value{
+                    print("bonne réponse")
+                    selectedAnswer = "GA"
+            }
         case answer2:
                 print("Answer2 Selected")
-            
+                if answerText2.text == lesson.exercises[0].expectedAnswer.value{
+                    print("bonne réponse")
+                    selectedAnswer = "GA"
+            }
         case answer3:
                 print("Answer3 Selected")
-            
+                if answerText3.text == lesson.exercises[0].expectedAnswer.value{
+                    print("bonne réponse")
+                    selectedAnswer = "GA"
+            }
         case answer4:
                 print("Answer4 Selected")
+                if answerText4.text == lesson.exercises[0].expectedAnswer.value{
+                    print("bonne réponse")
+                    selectedAnswer = "GA"
+            }
         default:
-                print("Another answer is selected")
+            let alertController = UIAlertController(title: "Attention", message: "Merci de faire un choix.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Fermer", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
     
         }
     }
-    
-    func validateButtonTapped(sender: UIButton){
-    
+
+    @IBAction func validateButtonTapped(_ sender: Any) {
+        if selectedAnswer == "GA"{
+            pointsCounter += 1
+            let alertController = UIAlertController(title: "Bravo", message: "Bonne réponse", preferredStyle: .alert)
+            let vcName = "secondExerciseDay"
+            let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! SecondExerciseVC
+            vc.lesson = Lessons.allLessons[1]
+            vc.questionPassed = Lessons.allLessons[1].exercises[0].question
+            vc.pointsCounter = pointsCounter
+            let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)})
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+            print(pointsCounter)
+        }
+        else
+        {
+            let alertController = UIAlertController(title: "Aïe", message: "Mauvaise réponse", preferredStyle: .alert)
+            let vcName = "secondExerciseDay"
+            let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! SecondExerciseVC
+            vc.lesson = Lessons.allLessons[1]
+            vc.questionPassed = Lessons.allLessons[1].exercises[0].question
+            vc.pointsCounter = pointsCounter
+            let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)})
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+        }
+//        let vcName = "secondExerciseDay"
+//        let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! SecondExerciseVC
+//        vc.lesson = Lessons.allLessons[1]
+//        vc.questionPassed = Lessons.allLessons[1].exercises[0].question
+//        navigationController?.pushViewController(vc, animated: true)
+        
     }
-    
-//    func getLesson() -> Lesson{
-//        
-//    }
 }
