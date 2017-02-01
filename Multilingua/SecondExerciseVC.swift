@@ -44,7 +44,7 @@ class SecondExerciseVC: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true // pour bloquer le retour en arrière
-        
+        validateButton.layer.cornerRadius = 5
         self.questionLabel.text = "Question : " + questionPassed
         questionLabel.textAlignment = NSTextAlignment.center
         self.answerText1.text = lesson.exercises[0].answers[0].value

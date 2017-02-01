@@ -34,9 +34,6 @@ class ExerciseViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        validateButton.layer.cornerRadius = 5
-        
         answer1?.alternateButton = [answer2!, answer3!, answer4!]
         answer2?.alternateButton = [answer1!, answer3!, answer4!]
         answer3?.alternateButton = [answer1!, answer2!, answer4!]
@@ -46,7 +43,7 @@ class ExerciseViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true // pour bloquer le retour en arrière
-        
+        validateButton.layer.cornerRadius = 5
         self.questionLabel.text = "Question : " + questionPassed
         questionLabel.textAlignment = NSTextAlignment.center
         self.answerText1.text = lesson.exercises[0].answers[0].value
@@ -73,7 +70,7 @@ class ExerciseViewController: UIViewController{
         
         switch sender{
         case answer1:
-                print("Answer1 is selected")
+                print("Answer1 selected")
                 if answerText1.text == lesson.exercises[0].expectedAnswer.value{
                     print("bonne réponse")
                     selectedAnswer = "GA"
@@ -131,11 +128,5 @@ class ExerciseViewController: UIViewController{
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
         }
-//        let vcName = "secondExerciseDay"
-//        let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! SecondExerciseVC
-//        vc.lesson = Lessons.allLessons[1]
-//        vc.questionPassed = Lessons.allLessons[1].exercises[0].question
-//        navigationController?.pushViewController(vc, animated: true)
-        
     }
 }
