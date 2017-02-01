@@ -23,8 +23,8 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(DashboardViewController.date), userInfo: nil, repeats: true)
-//        userLabel.text = "Bonjour, " + stringPassed
-//        userLabel.textAlignment = NSTextAlignment.center
+        userLabel.text = "Bonjour, " + stringPassed
+        userLabel.textAlignment = NSTextAlignment.center
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,7 +35,6 @@ class DashboardViewController: UIViewController {
         navigationItem.hidesBackButton = true
         userLabel.text = "Bonjour, " + stringPassed
         userLabel.textAlignment = NSTextAlignment.center
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_dashboard"), style: .plain, target: DashboardViewController.self, action: nil)
     }
     
     func date(){

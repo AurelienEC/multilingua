@@ -17,7 +17,7 @@ class LessonsExercisesVC: UIViewController{
     var segueIdentifier:String? = nil
     
     var randomIndex = Int(arc4random_uniform(UInt32(Lessons.allLessons.count)))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         goToExercise.layer.cornerRadius = 5     
@@ -34,17 +34,24 @@ class LessonsExercisesVC: UIViewController{
         let randomContent = allLessons[randomIndex].content
         lessonTextTitle.text = randomTitle
         lessonTextContent.text = randomContent
+        
     }
     
     @IBAction func goToExercise(_ sender: UIButton) {
+        
+        if Lessons.lessonsDone.contains(Lessons.allLessons[randomIndex].id){
+            print("deja dans l'array")
+            print(randomIndex)
+        }
+        
         let vcName = "exerciseDay"
 //        let randomExercise = Int(arc4random_uniform(UInt32(Lessons.allLessons[randomIndex].exercises.count)))
         let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! ExerciseViewController
         vc.lesson = Lessons.allLessons[0]
         vc.questionPassed = Lessons.allLessons[0].exercises[0].question
-
-//        let sfd:String = vc.lesson.exercises[0].answers[1].value
+        Lessons.lessonsDone.append(Lessons.allLessons[randomIndex].id)
         navigationController?.pushViewController(vc, animated: true)
+        print(Lessons.lessonsDone)
     }
 
     func dashIconTouched(sender: UIBarButtonItem){

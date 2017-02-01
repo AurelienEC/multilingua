@@ -114,7 +114,7 @@ class ExerciseViewController: UIViewController{
             let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)})
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
-            print(pointsCounter)
+            print("Compteur de point actuel à\(pointsCounter)")
         }
         else
         {
@@ -128,5 +128,6 @@ class ExerciseViewController: UIViewController{
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
         }
+
     }
 }
