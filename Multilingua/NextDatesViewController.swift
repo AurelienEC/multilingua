@@ -16,12 +16,19 @@ class NextDatesViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var checkBoxButton: CheckBox!
     var isCheckboxChecked:Bool!
     
-    let dates = ["Anglais: Le Mardi 31 Janvier à 16:40", "Anglais: Mercredi 01 Fevrier à 11:30", "Espagnol: Jeudi 02 Fevrier à 13:45"]
+    //on définit les prochaines date de formations ici
+    let formations: [LessonNotifications] = [
+        LessonNotifications(kind: .spanish, date: calendar.date(from: DateComponents(year: 2017, month: 2, day: 1, hour: 15, minute: 26))!),
+        LessonNotifications(kind: .english, date: calendar.date(from: DateComponents(year: 2017, month: 12, day: 29, hour: 13, minute: 30))!),
+        LessonNotifications(kind: .english, date: calendar.date(from: DateComponents(year: 2017, month: 12, day: 21, hour: 18, minute: 30))!)
+    ]
+    
     let textCellIdentifier = "TextCell"
     var isGrantedNotificationAccess:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        _ = Calendar.autoupdatingCurrent
         isCheckboxChecked = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,11 +45,11 @@ class NextDatesViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dates.count
+        return formations.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "basic")
-        cell.textLabel?.text = String(dates[indexPath.row])
+        cell.textLabel?.text = String(describing: formations[indexPath.row].text)
         return cell
     }
     
@@ -57,26 +64,30 @@ class NextDatesViewController: UIViewController, UITableViewDelegate, UITableVie
         if isCheckboxChecked == true{
             // Active les notif
             if isGrantedNotificationAccess{
-                //Ancien Code
+
                 let content = UNMutableNotificationContent()
                 content.title = "Rappel pour votre Formation"
                 content.body = "Nous vous rappellons qu'une formation est prévue dans une heure"
                 content.sound = UNNotificationSound.default()
-
-                let calendar = Calendar.current
-                let reminderNextFormation = DateComponents(month: 1, day: 31, hour: 17, minute: 25)
-                let nextFormationDate = calendar.date(from: reminderNextFormation)
-                let components = calendar.dateComponents(in: .current, from: nextFormationDate!)
-                let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
-                let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
-                let request = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
                 
+                let nextFormationDate = formations[0].date
+                let components = calendar.dateComponents(in: .current, from: nextFormationDate)
+                let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
+                
+                var trigger: UNCalendarNotificationTrigger {
+                    let triggerDate = calendar.date(byAdding: .hour, value: LessonNotifications.triggerHourDifference, to: formations[0].date)
+                    let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: triggerDate!)
+                    
+                    return UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+                }
+                let request = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
                 UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                 UNUserNotificationCenter.current().add(request) {(error) in
                     if let error = error {
                         print("Oops! Une erreur s'est glissée: \(error)")
                     }
                 }
+            print(nextFormationDate)
             }
         }
         else{

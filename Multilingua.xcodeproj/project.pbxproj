@@ -28,7 +28,7 @@
 		C5E2D8131E38F3EC009CC9EE /* checkBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8121E38F3EC009CC9EE /* checkBoxes.swift */; };
 		C5E2D8151E3A411A009CC9EE /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2D8141E3A411A009CC9EE /* AnswersViewController.swift */; };
 		C5F77EDA1E3F90EE001E24FE /* SecondExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F77ED91E3F90EE001E24FE /* SecondExerciseVC.swift */; };
-		C5F77EDC1E40E5DE001E24FE /* Formations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F77EDB1E40E5DD001E24FE /* Formations.swift */; };
+		C5F77EDC1E40E5DE001E24FE /* LessonNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F77EDB1E40E5DD001E24FE /* LessonNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,7 @@
 		C5E2D8121E38F3EC009CC9EE /* checkBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkBoxes.swift; sourceTree = "<group>"; };
 		C5E2D8141E3A411A009CC9EE /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
 		C5F77ED91E3F90EE001E24FE /* SecondExerciseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondExerciseVC.swift; sourceTree = "<group>"; };
-		C5F77EDB1E40E5DD001E24FE /* Formations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formations.swift; sourceTree = "<group>"; };
+		C5F77EDB1E40E5DD001E24FE /* LessonNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +187,7 @@
 			children = (
 				C5C61D1D1E362023000130BB /* Users.swift */,
 				C5C61D251E367A86000130BB /* Lessons.swift */,
-				C5F77EDB1E40E5DD001E24FE /* Formations.swift */,
+				C5F77EDB1E40E5DD001E24FE /* LessonNotification.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 				C5C61D241E3659FC000130BB /* ContactViewController.swift in Sources */,
 				C5E2D8131E38F3EC009CC9EE /* checkBoxes.swift in Sources */,
 				C5E2D8111E38F3E2009CC9EE /* radioButtons.swift in Sources */,
-				C5F77EDC1E40E5DE001E24FE /* Formations.swift in Sources */,
+				C5F77EDC1E40E5DE001E24FE /* LessonNotification.swift in Sources */,
 				C5C61D131E2FCA7C000130BB /* SignInViewController.swift in Sources */,
 				C5F77EDA1E3F90EE001E24FE /* SecondExerciseVC.swift in Sources */,
 				C5E2D8151E3A411A009CC9EE /* AnswersViewController.swift in Sources */,
