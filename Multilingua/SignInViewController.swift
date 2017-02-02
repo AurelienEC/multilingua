@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController
+class SignInViewController: UIViewController, UITextFieldDelegate
 {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
@@ -17,6 +17,38 @@ class SignInViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 5
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard))
+        //Uncomment the line below if you want the tap not to interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        username.delegate = self
+        password.delegate = self
+        username.tag = 0
+        password.tag = 1
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Try to find next responder
+        if let textField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField{
+            textField.becomeFirstResponder()
+            print("dans le if")
+            
+        }
+        /*if textField === password{
+            On pourrait ici definir l'action de connexion au clic sur le bouton return du clavier
+        }*/
+        else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            print("dans le else")
+        }
+        return false
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,8 +85,8 @@ class SignInViewController: UIViewController
         
         if segue.identifier == "logInSegue"{
             
-            let dashboard = segue.destination as! DashboardViewController
-            dashboard.stringPassed = username.text!
+            _ = segue.destination as! UINavigationController
+//            dashboard.stringPassed = username.text!
         }
     }
 }

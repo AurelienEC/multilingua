@@ -52,6 +52,10 @@ class NextDatesViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.textLabel?.text = String(describing: formations[indexPath.row].text)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // Empêcher les  cellules de rester séléectionnées
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
     @IBAction func checkboxTapped(_ sender: CheckBox) {
         if isCheckboxChecked == true{

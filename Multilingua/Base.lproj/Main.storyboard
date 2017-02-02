@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MMZ-OE-pqP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iJ6-lM-5qP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="dQo-lV-QWs">
             <objects>
-                <viewController storyboardIdentifier="signin" id="iJ6-lM-5qP" customClass="SignInViewController" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iJ6-lM-5qP" customClass="SignInViewController" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uni-Vw-QJ2"/>
                         <viewControllerLayoutGuide type="bottom" id="yFr-op-IU9"/>
@@ -38,12 +38,18 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WLW-mY-oSq" id="V3q-IT-yQR"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrez votre mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSF-C5-ETr">
                                 <rect key="frame" x="38" y="349" width="299" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WLW-mY-oSq" id="FVh-p9-Jeh"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom d'Utilisateur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-zz-gYq">
                                 <rect key="frame" x="38" y="225" width="300" height="21"/>
@@ -68,7 +74,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logInSegue" id="hPe-h3-ZHH"/>
+                                    <segue destination="TaH-e1-j3t" kind="show" identifier="logInSegue" id="hPe-h3-ZHH"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="text_logo" translatesAutoresizingMaskIntoConstraints="NO" id="yQy-Dz-fzb">
@@ -103,12 +109,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckT-Iu-BGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.80000000000001" y="37.331334332833585"/>
+            <point key="canvasLocation" x="297" y="36"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="dashboard" id="BYZ-38-t0r" customClass="DashboardViewController" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DashboardViewController" customModule="Multilingua" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -172,13 +178,22 @@
                                     <segue destination="Xs9-U1-mYs" kind="show" id="810-3C-uWq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leçons &amp; Exercices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5N-J8-hpl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="La leçon du jour !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5N-J8-hpl">
                                 <rect key="frame" x="113" y="390" width="149" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6E-rn-Eh8">
+                                <rect key="frame" x="133" y="585" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Se déconnecter"/>
+                                <connections>
+                                    <action selector="logOutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uGS-ld-bgO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -190,15 +205,17 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Y9r-KU-rLp"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateLabel" destination="OvX-je-AG3" id="0qH-vq-A7P"/>
+                        <outlet property="logOutButton" destination="i6E-rn-Eh8" id="JvZ-og-cE9"/>
                         <outlet property="userLabel" destination="6Z2-8o-g64" id="bfK-NL-SWq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="37"/>
+            <point key="canvasLocation" x="2212" y="36.431784107946029"/>
         </scene>
         <!--Next Dates View Controller-->
         <scene sceneID="KEm-4M-aVY">
@@ -361,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oz5-Z6-3dG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3413.5999999999999" y="36.431784107946029"/>
+            <point key="canvasLocation" x="4352.8000000000002" y="36.431784107946029"/>
         </scene>
         <!--Answers View Controller-->
         <scene sceneID="dbx-c2-eVS">
@@ -414,7 +431,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG5-sq-Mae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5004" y="36.431784107946029"/>
+            <point key="canvasLocation" x="5943.1999999999998" y="36.431784107946029"/>
         </scene>
         <!--Second ExerciseVC-->
         <scene sceneID="HgI-W2-64q">
@@ -536,7 +553,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qf8-cn-F5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4271" y="37"/>
+            <point key="canvasLocation" x="5208.8000000000002" y="36.431784107946029"/>
         </scene>
         <!--Lessons ExercisesVC-->
         <scene sceneID="t68-4K-DXy">
@@ -600,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGn-8D-rI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2684" y="37"/>
+            <point key="canvasLocation" x="3623.1999999999998" y="36.431784107946029"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="1fX-v0-RF6">
@@ -640,22 +657,22 @@
             <point key="canvasLocation" x="2186" y="-633"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Jea-6q-URA">
+        <scene sceneID="Vli-zT-JLe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MMZ-OE-pqP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TaH-e1-j3t" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1Pf-s6-JOs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3sn-I1-Fik">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="iJ6-lM-5qP" kind="relationship" relationship="rootViewController" id="G8C-q1-UPq"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cM7-5I-TdN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Dz-mU-B0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="naS-PG-XFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-542" y="37"/>
+            <point key="canvasLocation" x="1272.8" y="36.431784107946029"/>
         </scene>
     </scenes>
     <resources>

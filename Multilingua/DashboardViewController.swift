@@ -18,13 +18,15 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var lessonsImage: UIImageView!
     @IBOutlet weak var calendarImage: UIImageView!
-    @IBOutlet weak var contactImage: UIImageView!
+    @IBOutlet weak var contactImage: UIImageView!   
     
+    @IBOutlet weak var logOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(DashboardViewController.date), userInfo: nil, repeats: true)
-        userLabel.text = "Bonjour, " + stringPassed
+        userLabel.text = "Bonjour, " + UserDefaults.standard.string(forKey: "utilisateur")!
         userLabel.textAlignment = NSTextAlignment.center
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,7 +35,7 @@ class DashboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Tableau de Bord"
         navigationItem.hidesBackButton = true
-        userLabel.text = "Bonjour, " + stringPassed
+//        userLabel.text = "Bonjour, " + stringPassed
         userLabel.textAlignment = NSTextAlignment.center
     }
     
@@ -63,14 +65,18 @@ class DashboardViewController: UIViewController {
         //On montre le nouveau controller
         navigationController?.show(calendar, sender: self)
     }
-//
-//    @IBAction func contactClic(sender : UIButton) {
-//        //On récupère Main.storyboard
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        //On crée une instance d'Exercice à partir du storyboard
-//        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercices
-//        //On montre le nouveau controller
-//        navigationController?.show(lessons, sender: self)
-//    }
+
+    
+    @IBAction func logOutButtonTapped(_ sender: UIButton) {
+        UserDefaults.standard.removeObject(forKey: "username")
+        UserDefaults.standard.removeObject(forKey: "motDePasse")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //On crée une instance d'Exercice à partir du storyboard
+        let signIn = storyboard.instantiateViewController(withIdentifier: "signin") as! SignInViewController
+        //On montre le nouveau controller
+        navigationController?.show(signIn, sender: self)
+        
+    }
     
 }

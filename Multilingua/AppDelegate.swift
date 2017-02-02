@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+           if let _ = UserDefaults.standard.string(forKey: "utilisateur"), let _ = UserDefaults.standard.string(forKey: "motDePasse") {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "navigationVC") as? UINavigationController {
+                window?.rootViewController = vc
+                window?.makeKeyAndVisible()
+            }
+        }
         self.window?.tintColor = UIColor(red: 20/255, green: 132/255, blue: 255/255, alpha: 1.0)
         let tabBarController = UITabBarController()
         tabBarController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
@@ -51,7 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
+
 }
 
