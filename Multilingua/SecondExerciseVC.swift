@@ -18,6 +18,10 @@ class SecondExerciseVC: UIViewController{
     
     @IBOutlet weak var questionLabel: UILabel!
     
+    @IBOutlet var answerTexts: [UILabel]!
+    
+    @IBOutlet var answers: [RadioButton]!
+    
     @IBOutlet weak var answer1: RadioButton!
     @IBOutlet weak var answer2: RadioButton!
     @IBOutlet weak var answer3: RadioButton!
@@ -31,6 +35,7 @@ class SecondExerciseVC: UIViewController{
     @IBOutlet weak var validateButton: UIButton!
     var selectedAnswer: String?
     var pointsCounter: Int = 0
+    var exercisesDone: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +44,19 @@ class SecondExerciseVC: UIViewController{
         answer2?.alternateButton = [answer1!, answer3!, answer4!]
         answer3?.alternateButton = [answer1!, answer2!, answer4!]
         answer4?.alternateButton = [answer1!, answer2!, answer3!]
+        
+        for answerText in answerTexts { // on enable l'interaction pour le tap Gesture
+            answerText.isUserInteractionEnabled = true
+        }
+        let tapOne = UITapGestureRecognizer(target: self, action: #selector(ExerciseViewController.answerTapped))
+        answerText1.addGestureRecognizer(tapOne)
+        let tapTwo = UITapGestureRecognizer(target: self, action: #selector(ExerciseViewController.answerTapped))
+        answerText2.addGestureRecognizer(tapTwo)
+        let tapThree = UITapGestureRecognizer(target: self, action: #selector(ExerciseViewController.answerTapped))
+        answerText3.addGestureRecognizer(tapThree)
+        let tapFour = UITapGestureRecognizer(target: self, action: #selector(ExerciseViewController.answerTapped))
+        answerText4.addGestureRecognizer(tapFour)
+        exercisesDone += 1
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,10 +78,22 @@ class SecondExerciseVC: UIViewController{
     override func awakeFromNib() {
         super.awakeFromNib()
         self.view.layoutIfNeeded()
-        answer1.isSelected = true
-        answer2.isSelected = false
-        answer3.isSelected = false
-        answer4.isSelected = false
+        for answer in answers{
+            answer.isSelected = false
+        }
+    }
+    
+    func answerTapped(sender: UITapGestureRecognizer){
+        for (index,answerText) in answerTexts.enumerated(){
+            if sender.view == answerText{
+                answers[index].isSelected = true
+                let filteredAnswers = answers.filter { $0 != answers[index]}
+                for filteredAnswer in filteredAnswers{
+                    filteredAnswer.isSelected = false
+                }
+                print("Index tapped is \(index)")
+            }
+        }
     }
     
     @IBAction func checkAnswer(_ sender: RadioButton) {
@@ -94,13 +124,16 @@ class SecondExerciseVC: UIViewController{
                 selectedAnswer = "GA"
             }
         default:
-            print("Another answer is selected")
-            
+            let alertController = UIAlertController(title: "Attention", message: "Merci de faire un choix.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Fermer", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
         }
     }
     
         @IBAction func validateButtonTapped(_ sender: UIButton) {
-        
+            if (selectedAnswer != nil){
+                exercisesDone += 1
             if selectedAnswer == "GA"{
                 pointsCounter += 1
                 let alertController = UIAlertController(title: "Bravo", message: "Bonne réponse", preferredStyle: .alert)
@@ -108,6 +141,7 @@ class SecondExerciseVC: UIViewController{
                 let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! AnswersViewController
                 let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)})
                 vc.pointsCounter = pointsCounter
+                vc.exercisesDone = exercisesDone
                 alertController.addAction(defaultAction)
                 present(alertController, animated: true, completion: nil)
                 print(pointsCounter)
@@ -119,8 +153,17 @@ class SecondExerciseVC: UIViewController{
                 let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! AnswersViewController
                 let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)})
                 vc.pointsCounter = pointsCounter
+                vc.exercisesDone = exercisesDone
                 alertController.addAction(defaultAction)
                 present(alertController, animated: true, completion: nil)
+            }
+            }else
+            {
+                let alertController = UIAlertController(title: "Attention", message: "Merci de faire un choix.", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "Fermer", style: .default, handler: nil)
+                alertController.addAction(defaultAction)
+                present(alertController, animated: true, completion: nil)
+
             }
 
         

@@ -10,8 +10,8 @@ import UIKit
 
 class AnswersViewController: UIViewController{
     
-//    let lesson:Lesson! = nil
     var pointsCounter:Int = 0
+    var exercisesDone:Int = 0
     
     @IBOutlet weak var answerText: UITextView!
     
@@ -28,7 +28,7 @@ class AnswersViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true // pour bloquer le retour en arrière
-        answerText.text = "Vous avez obtenu \(pointsCounter) point(s)."
+        answerText.text = "Vous avez obtenu \(pointsCounter) point(s) sur \(exercisesDone) exercices effectués."
     }
     @IBAction func backToDashboard(_ sender: UIButton) {
         let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController

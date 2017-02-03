@@ -30,6 +30,7 @@ class ContactViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.title = "Contacter mon Responsable"
     }
     
     
@@ -57,6 +58,7 @@ class ContactViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0{
             let phoneNumber:String? = "0507712323"
             if let callNumber = phoneNumber {

@@ -23,9 +23,6 @@ class LessonsExercisesVC: UIViewController{
         goToExercise.layer.cornerRadius = 5     
         
     }
-    override func viewDidAppear(_ animated: Bool) {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_dashboard"), style: .plain, target: self, action: #selector(dashIconTouched))
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         let allLessons = Lessons.allLessons

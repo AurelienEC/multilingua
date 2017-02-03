@@ -23,6 +23,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var logOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        logOutButton.layer.cornerRadius = 5
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(DashboardViewController.date), userInfo: nil, repeats: true)
         userLabel.text = "Bonjour, " + UserDefaults.standard.string(forKey: "utilisateur")!
         userLabel.textAlignment = NSTextAlignment.center

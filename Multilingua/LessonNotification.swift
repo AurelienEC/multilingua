@@ -10,9 +10,9 @@ import Foundation
 import UserNotifications
 
 enum LessonKind {
-    case english
-    case spanish
-    case portuguese
+    case anglais
+    case espagnol
+    case portuguais
 }
 
 struct LessonNotifications {
@@ -37,9 +37,9 @@ struct LessonNotifications {
         let dateText = formatter.string(from: self.date)
         let lessonText: String = {
             switch self.kind {
-            case .english: return "Anglais"
-            case .spanish: return "Espagnol"
-            case .portuguese: return "Portugais"
+            case .anglais: return "Anglais"
+            case .espagnol: return "Espagnol"
+            case .portuguais: return "Portugais"
             }
         }()
         
