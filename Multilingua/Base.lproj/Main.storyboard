@@ -16,6 +16,12 @@
         <array key="OpenSans-ExtraBold.ttf">
             <string>OpenSans-Extrabold</string>
         </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Sign In View Controller-->
@@ -137,7 +143,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frJ-g1-CTh">
-                                <rect key="frame" x="248" y="445" width="90" height="90"/>
+                                <rect key="frame" x="248" y="378" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="contact"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -147,7 +153,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EM-tw-Cvn">
-                                <rect key="frame" x="44" y="445" width="90" height="90"/>
+                                <rect key="frame" x="44" y="378" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="calendar"/>
                                 <state key="normal" title="Calendar" image="Calendar-icon"/>
@@ -156,21 +162,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prochaines dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-DL-u3o">
-                                <rect key="frame" x="23" y="542" width="132" height="21"/>
+                                <rect key="frame" x="23" y="475" width="132" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okr-ze-qfk">
-                                <rect key="frame" x="263" y="543" width="61" height="21"/>
+                                <rect key="frame" x="263" y="476" width="61" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z18-ha-U0o">
-                                <rect key="frame" x="142" y="290" width="90" height="90"/>
+                                <rect key="frame" x="142" y="223" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lessons"/>
                                 <state key="normal" title="Lessons" image="Lessons-icon"/>
@@ -179,14 +185,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="La leçon du jour !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5N-J8-hpl">
-                                <rect key="frame" x="113" y="390" width="149" height="21"/>
+                                <rect key="frame" x="113" y="323" width="149" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6E-rn-Eh8">
-                                <rect key="frame" x="113" y="585" width="149" height="30"/>
+                                <rect key="frame" x="114" y="538" width="149" height="30"/>
                                 <color key="backgroundColor" red="0.98068982039999997" green="0.039475649190000003" blue="0.021255360590000001" alpha="0.61790988869999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Se déconnecter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,9 +208,9 @@
                             <constraint firstItem="6Z2-8o-g64" firstAttribute="top" secondItem="OvX-je-AG3" secondAttribute="bottom" constant="40" id="IgL-nY-8xB"/>
                             <constraint firstItem="OvX-je-AG3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="QT0-le-arP"/>
                             <constraint firstItem="6Z2-8o-g64" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UNe-Uz-aT3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i6E-rn-Eh8" secondAttribute="trailing" constant="97" id="VFa-P7-yDL"/>
-                            <constraint firstItem="i6E-rn-Eh8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="cPF-BX-jB6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i6E-rn-Eh8" secondAttribute="bottom" constant="8" id="s3S-61-SjZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i6E-rn-Eh8" secondAttribute="trailing" constant="96" id="VFa-P7-yDL"/>
+                            <constraint firstItem="i6E-rn-Eh8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="98" id="cPF-BX-jB6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i6E-rn-Eh8" secondAttribute="bottom" constant="55" id="s3S-61-SjZ"/>
                             <constraint firstItem="6Z2-8o-g64" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="taK-bd-mnu"/>
                         </constraints>
                     </view>
@@ -420,6 +426,7 @@
                                     <constraint firstAttribute="height" constant="46" id="8aZ-UW-v5y"/>
                                     <constraint firstAttribute="width" constant="257" id="IcX-bB-Tli"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Retour au Tableau de Bord">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -427,13 +434,22 @@
                                     <action selector="backToDashboard:" destination="UaP-Gi-sEI" eventType="touchUpInside" id="0nj-zn-MYi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Résultats des Exercices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQg-Rm-XmX">
+                                <rect key="frame" x="70" y="80" width="235" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                <color key="textColor" red="0.17277632940000001" green="0.29579636009999999" blue="1" alpha="0.61790988869999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="P5V-Pv-QJm" firstAttribute="centerX" secondItem="cZb-hw-DeX" secondAttribute="centerX" id="10T-Eg-BFM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cZb-hw-DeX" secondAttribute="trailing" constant="43" id="3MP-bN-tYM"/>
                             <constraint firstItem="cZb-hw-DeX" firstAttribute="leading" secondItem="PAD-yw-v4q" secondAttribute="leadingMargin" constant="43" id="FbB-NL-WKp"/>
+                            <constraint firstItem="NQg-Rm-XmX" firstAttribute="leading" secondItem="PAD-yw-v4q" secondAttribute="leadingMargin" constant="54" id="Fg8-cU-fRb"/>
                             <constraint firstItem="8ki-dP-xEm" firstAttribute="top" secondItem="cZb-hw-DeX" secondAttribute="bottom" constant="174" id="Onk-oc-FH9"/>
+                            <constraint firstItem="NQg-Rm-XmX" firstAttribute="top" secondItem="L1I-bG-anc" secondAttribute="bottom" constant="60" id="frf-Hi-eJe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NQg-Rm-XmX" secondAttribute="trailing" constant="54" id="gK4-t4-qcf"/>
                             <constraint firstItem="P5V-Pv-QJm" firstAttribute="leading" secondItem="PAD-yw-v4q" secondAttribute="leadingMargin" constant="51" id="oWs-Bi-Awo"/>
                             <constraint firstItem="cZb-hw-DeX" firstAttribute="top" secondItem="P5V-Pv-QJm" secondAttribute="bottom" constant="90" id="y1i-Q8-Dlm"/>
                         </constraints>
@@ -590,13 +606,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leçon du Jour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-wn-ove">
-                                <rect key="frame" x="87" y="143" width="202" height="23.5"/>
+                                <rect key="frame" x="87" y="99" width="202" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" red="0.079285178070000004" green="0.51670005789999995" blue="1" alpha="0.53595890410000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZn-hN-M0Q">
-                                <rect key="frame" x="113" y="493" width="150" height="40"/>
+                                <rect key="frame" x="113" y="537" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.047545011522139968" green="0.80464092026383571" blue="1" alpha="0.4258347602739726" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9Xy-VB-uko"/>
@@ -608,7 +624,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BwR-AY-KQH">
-                                <rect key="frame" x="68" y="203.5" width="239" height="169"/>
+                                <rect key="frame" x="68" y="159.5" width="239" height="169"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="169" id="rSR-fY-pZK"/>
@@ -654,7 +670,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="6Pl-cS-UT9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="292"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="224"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="fSK-OL-uI9" id="tZY-5M-HvR"/>
@@ -680,7 +696,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OtE-Cd-1ZK" firstAttribute="top" secondItem="6Pl-cS-UT9" secondAttribute="bottom" constant="267" id="9CL-Jr-34e"/>
+                            <constraint firstItem="OtE-Cd-1ZK" firstAttribute="top" secondItem="6Pl-cS-UT9" secondAttribute="bottom" constant="335" id="9CL-Jr-34e"/>
                             <constraint firstItem="6Pl-cS-UT9" firstAttribute="top" secondItem="iDB-Bp-exF" secondAttribute="bottom" id="BeA-Qw-Wqv"/>
                             <constraint firstItem="627-Ld-K3B" firstAttribute="leading" secondItem="fSK-OL-uI9" secondAttribute="leadingMargin" constant="55" id="CJM-av-nqc"/>
                             <constraint firstItem="627-Ld-K3B" firstAttribute="centerX" secondItem="ZEk-gX-goa" secondAttribute="centerX" id="HZj-Zr-tws"/>

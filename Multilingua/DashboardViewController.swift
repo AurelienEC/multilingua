@@ -36,7 +36,6 @@ class DashboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Tableau de Bord"
         navigationItem.hidesBackButton = true
-        //        userLabel.text = "Bonjour, " + stringPassed
         userLabel.textAlignment = NSTextAlignment.center
     }
     
@@ -49,8 +48,6 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func lessonsDayClic(_ sender: UIButton) {
-//    }
-//    @IBAction func lessonsClic(sender : UIButton) {
         
         let defaults = UserDefaults.standard
         let dayLessonRead = "dayLessonRead"
@@ -78,18 +75,17 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func calendarClic(sender : UIButton) {
-        //On récupère Main.storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) //On récupère Main.storyboard
         //On crée une instance d'Exercice à partir du storyboard
         let calendar = storyboard.instantiateViewController(withIdentifier: "calendar") as! NextDatesViewController
-        //On montre le nouveau controller
-        navigationController?.show(calendar, sender: self)
+        navigationController?.show(calendar, sender: self) //On montre le nouveau controller
     }
     
     
     @IBAction func logOutButtonTapped(_ sender: UIButton) {
         UserDefaults.standard.removeObject(forKey: "username")
         UserDefaults.standard.removeObject(forKey: "motDePasse")
+        UserDefaults.standard.removeObject(forKey: "dayLessonRead") // Pour supprimer la leçon lue (Test uniquement)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         //On crée une instance d'Exercice à partir du storyboard
