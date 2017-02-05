@@ -33,7 +33,7 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
     @IBOutlet weak var answerText4: UILabel!
     
     @IBOutlet weak var validateButton: UIButton!
-    var selectedAnswer: String = ""
+    var selectedAnswer: String?
     var pointsCounter: Int = 0
     var exercisesDones: Int = 0
     
@@ -105,11 +105,18 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
                 print("bonne réponse")
                 selectedAnswer = "GA"
             }
+            else{
+                selectedAnswer = "BA"
+                print("ba")
+            }
         case answer2:
             print("Answer2 Selected")
             if answerText2.text == lesson.exercises[0].expectedAnswer.value{
                 print("bonne réponse")
                 selectedAnswer = "GA"
+            }
+            else{
+                selectedAnswer = "BA"
             }
         case answer3:
             print("Answer3 Selected")
@@ -117,19 +124,26 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
                 print("bonne réponse")
                 selectedAnswer = "GA"
             }
+            else{
+                selectedAnswer = "BA"
+            }
         case answer4:
             print("Answer4 Selected")
             if answerText4.text == lesson.exercises[0].expectedAnswer.value{
                 print("bonne réponse")
                 selectedAnswer = "GA"
             }
+            else{
+                selectedAnswer = "BA"
+            }
         default:
-            selectedAnswer = ""
+            selectedAnswer = "error"
         }
     }
     
     @IBAction func validateButtonTapped(_ sender: Any) {
-        if (selectedAnswer == ""){
+
+        if ((selectedAnswer) != nil){
             if selectedAnswer == "GA"{
                 pointsCounter += 1
                 let alertController = UIAlertController(title: "Bravo", message: "Bonne réponse", preferredStyle: .alert)
@@ -165,6 +179,5 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
         }
-        
     }
 }

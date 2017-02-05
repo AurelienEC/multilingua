@@ -175,7 +175,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="lessons"/>
                                 <state key="normal" title="Lessons" image="Lessons-icon"/>
                                 <connections>
-                                    <segue destination="Xs9-U1-mYs" kind="show" id="810-3C-uWq"/>
+                                    <action selector="lessonsDayClic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hbp-yX-HOc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="La leçon du jour !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5N-J8-hpl">
@@ -382,10 +382,10 @@
                         <outletCollection property="answerTexts" destination="YLJ-85-OGp" collectionClass="NSMutableArray" id="FlR-8N-Was"/>
                         <outletCollection property="answerTexts" destination="3MI-dF-mGX" collectionClass="NSMutableArray" id="2qk-K7-YCV"/>
                         <outletCollection property="answerTexts" destination="zwe-eN-pEu" collectionClass="NSMutableArray" id="kMZ-2F-Eex"/>
-                        <outletCollection property="answers" destination="sVL-97-oWH" id="Ifh-mA-gtO"/>
-                        <outletCollection property="answers" destination="fmn-XQ-ON7" id="Zke-iu-pUy"/>
-                        <outletCollection property="answers" destination="gc3-x9-Q50" id="CPm-Nm-KaT"/>
-                        <outletCollection property="answers" destination="Zaf-gz-Rbs" id="7xf-8U-LH0"/>
+                        <outletCollection property="answers" destination="sVL-97-oWH" collectionClass="NSMutableArray" id="Ifh-mA-gtO"/>
+                        <outletCollection property="answers" destination="fmn-XQ-ON7" collectionClass="NSMutableArray" id="Zke-iu-pUy"/>
+                        <outletCollection property="answers" destination="gc3-x9-Q50" collectionClass="NSMutableArray" id="CPm-Nm-KaT"/>
+                        <outletCollection property="answers" destination="Zaf-gz-Rbs" collectionClass="NSMutableArray" id="7xf-8U-LH0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oz5-Z6-3dG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -562,14 +562,14 @@
                         <outlet property="answerText4" destination="f3R-vr-sDu" id="cPR-d0-eoO"/>
                         <outlet property="questionLabel" destination="p2a-n4-Iv2" id="pNF-DM-823"/>
                         <outlet property="validateButton" destination="WXj-gr-oww" id="tjz-a9-tSg"/>
-                        <outletCollection property="answerTexts" destination="zOE-ph-KaW" id="zy3-bN-U3f"/>
-                        <outletCollection property="answerTexts" destination="oYB-ms-hxM" id="0i0-5k-CBP"/>
-                        <outletCollection property="answerTexts" destination="If3-9G-HpZ" id="ZwG-SZ-PqD"/>
-                        <outletCollection property="answerTexts" destination="f3R-vr-sDu" id="5zf-bO-8g1"/>
-                        <outletCollection property="answers" destination="Id5-LD-6wO" id="dMx-gv-IOg"/>
-                        <outletCollection property="answers" destination="Ygq-dD-CNO" id="bSG-6m-XpW"/>
-                        <outletCollection property="answers" destination="ImQ-fI-5uv" id="MQt-k4-ofk"/>
-                        <outletCollection property="answers" destination="MfL-8V-xFE" id="mvE-46-oe6"/>
+                        <outletCollection property="answerTexts" destination="zOE-ph-KaW" collectionClass="NSMutableArray" id="zy3-bN-U3f"/>
+                        <outletCollection property="answerTexts" destination="oYB-ms-hxM" collectionClass="NSMutableArray" id="0i0-5k-CBP"/>
+                        <outletCollection property="answerTexts" destination="If3-9G-HpZ" collectionClass="NSMutableArray" id="ZwG-SZ-PqD"/>
+                        <outletCollection property="answerTexts" destination="f3R-vr-sDu" collectionClass="NSMutableArray" id="5zf-bO-8g1"/>
+                        <outletCollection property="answers" destination="Id5-LD-6wO" collectionClass="NSMutableArray" id="dMx-gv-IOg"/>
+                        <outletCollection property="answers" destination="Ygq-dD-CNO" collectionClass="NSMutableArray" id="bSG-6m-XpW"/>
+                        <outletCollection property="answers" destination="ImQ-fI-5uv" collectionClass="NSMutableArray" id="MQt-k4-ofk"/>
+                        <outletCollection property="answers" destination="MfL-8V-xFE" collectionClass="NSMutableArray" id="mvE-46-oe6"/>
                         <segue destination="UaP-Gi-sEI" kind="show" identifier="showAnswerSegue" id="zuo-AT-hhv"/>
                     </connections>
                 </viewController>

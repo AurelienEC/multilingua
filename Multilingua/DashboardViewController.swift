@@ -18,7 +18,7 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var lessonsImage: UIImageView!
     @IBOutlet weak var calendarImage: UIImageView!
-    @IBOutlet weak var contactImage: UIImageView!   
+    @IBOutlet weak var contactImage: UIImageView!
     
     @IBOutlet weak var logOutButton: UIButton!
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class DashboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Tableau de Bord"
         navigationItem.hidesBackButton = true
-//        userLabel.text = "Bonjour, " + stringPassed
+        //        userLabel.text = "Bonjour, " + stringPassed
         userLabel.textAlignment = NSTextAlignment.center
     }
     
@@ -48,14 +48,33 @@ class DashboardViewController: UIViewController {
         dateLabel.textAlignment = NSTextAlignment.center
     }
     
-    @IBAction func lessonsClic(sender : UIButton) {
-        //On récupère Main.storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //On crée une instance d'Exercice à partir du storyboard
-        let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercisesVC
-        //On montre le nouveau controller
-        navigationController?.show(lessons, sender: self)
+    @IBAction func lessonsDayClic(_ sender: UIButton) {
+//    }
+//    @IBAction func lessonsClic(sender : UIButton) {
         
+        let defaults = UserDefaults.standard
+        let dayLessonRead = "dayLessonRead"
+        let today = Date()
+        UserDefaults.standard.set(Date(), forKey: dayLessonRead)
+        if let date = defaults.object(forKey: "dayLessonRead") as? Date, date == today{
+            if let already = defaults.object(forKey: "alreadyRead") as? Bool, already == false{
+                UserDefaults.standard.set(true, forKey: "alreadyRead")
+                print("today + false")
+                //On récupère Main.storyboard
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                //On crée une instance d'Exercice à partir du storyboard
+                let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercisesVC
+                //On montre le nouveau controller
+                navigationController?.show(lessons, sender: self)
+            }
+        }
+        else{
+            let alertController = UIAlertController(title: "Désolé", message: "Revenez demain pour une nouvelle leçon", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Retour", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+            print ("not today +  true")
+        }
     }
     
     @IBAction func calendarClic(sender : UIButton) {
@@ -66,7 +85,7 @@ class DashboardViewController: UIViewController {
         //On montre le nouveau controller
         navigationController?.show(calendar, sender: self)
     }
-
+    
     
     @IBAction func logOutButtonTapped(_ sender: UIButton) {
         UserDefaults.standard.removeObject(forKey: "username")

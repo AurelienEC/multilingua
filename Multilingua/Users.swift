@@ -24,6 +24,9 @@ class Users{
             // Connection OK
             UserDefaults.standard.set(user, forKey: Keys.username)
             UserDefaults.standard.set(pass, forKey: Keys.password)
+            // On rajoute une valeur concernant l'initalisation de la lecture de la leçon du jour
+            let alreadyRead = "alreadyRead"
+            UserDefaults.standard.set(false, forKey: alreadyRead)
             return true
         }
         return false
