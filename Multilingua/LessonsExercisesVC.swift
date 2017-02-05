@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LessonsExercisesVC: UIViewController{
     
     @IBOutlet weak var goToExercise: UIButton!
@@ -17,6 +18,8 @@ class LessonsExercisesVC: UIViewController{
     var segueIdentifier:String? = nil
     
     var randomIndex = Int(arc4random_uniform(UInt32(Lessons.allLessons.count)))
+    
+    var lessonDone = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +39,22 @@ class LessonsExercisesVC: UIViewController{
     
     @IBAction func goToExercise(_ sender: UIButton) {
         
+        let defaults = UserDefaults.standard
+        let dayLessonRead = "dayLessonRead"
+        let today = Date()
+        UserDefaults.standard.set(Date(), forKey: dayLessonRead)
+        if let date = defaults.object(forKey: "dayLessonRead") as? Date, date == today{
+            print("today")
+            
+        }
+        else{
+            print ("not today")
+        }
+        
         if Lessons.lessonsDone.contains(Lessons.allLessons[randomIndex].id){
             print("deja dans l'array")
             print(randomIndex)
+
         }
         
         let vcName = "exerciseDay"

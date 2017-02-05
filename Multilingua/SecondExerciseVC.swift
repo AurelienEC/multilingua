@@ -33,7 +33,7 @@ class SecondExerciseVC: UIViewController{
     @IBOutlet weak var answerText4: UILabel!
     
     @IBOutlet weak var validateButton: UIButton!
-    var selectedAnswer: String?
+    var selectedAnswer: String = ""
     var pointsCounter: Int = 0
     var exercisesDone: Int = 0
     
@@ -124,15 +124,12 @@ class SecondExerciseVC: UIViewController{
                 selectedAnswer = "GA"
             }
         default:
-            let alertController = UIAlertController(title: "Attention", message: "Merci de faire un choix.", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "Fermer", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+            selectedAnswer = ""
         }
     }
     
         @IBAction func validateButtonTapped(_ sender: UIButton) {
-            if (selectedAnswer != nil){
+            if (selectedAnswer == ""){
                 exercisesDone += 1
             if selectedAnswer == "GA"{
                 pointsCounter += 1

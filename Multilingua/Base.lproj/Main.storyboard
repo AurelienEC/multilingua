@@ -415,12 +415,14 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZb-hw-DeX">
                                 <rect key="frame" x="59" y="447" width="257" height="46"/>
-                                <color key="backgroundColor" red="0.98068982039340091" green="0.039475649188480677" blue="0.021255360593796707" alpha="0.61790988869863017" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.17277632943678789" green="0.29579636012095567" blue="1" alpha="0.61790988869863017" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="8aZ-UW-v5y"/>
                                     <constraint firstAttribute="width" constant="257" id="IcX-bB-Tli"/>
                                 </constraints>
-                                <state key="normal" title="Retour au Tableau de Bord"/>
+                                <state key="normal" title="Retour au Tableau de Bord">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="backToDashboard:" destination="UaP-Gi-sEI" eventType="touchUpInside" id="0nj-zn-MYi"/>
                                 </connections>

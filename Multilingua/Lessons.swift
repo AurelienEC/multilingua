@@ -26,8 +26,9 @@ struct Lesson{
     
 }
 class Lessons{
-    
-       /* static func showLessonOfToday() -> Lesson{
+
+
+    /* static func showLessonOfToday() -> Lesson{
                     let date = Date()
             let addDay:Int = 0
             let userCalendar = Calendar.current
