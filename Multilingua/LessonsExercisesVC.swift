@@ -34,17 +34,12 @@ class LessonsExercisesVC: UIViewController{
         let randomContent = allLessons[randomIndex].content
         lessonTextTitle.text = randomTitle
         lessonTextContent.text = randomContent
-        
     }
     
     @IBAction func goToExercise(_ sender: UIButton) {
-        if Lessons.lessonsDone.contains(Lessons.allLessons[randomIndex].id){
-            print("deja dans l'array")
-            print(randomIndex)
-        }
         
         let vcName = "exerciseDay"
-//        let randomExercise = Int(arc4random_uniform(UInt32(Lessons.allLessons[randomIndex].exercises.count)))
+//        let randomExercise = Int(arc4random_uniform(UInt32(Lessons.allLessons[randomIndex].exercises.count))) Pour un exercice aléatoire
         let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! ExerciseViewController
         vc.lesson = Lessons.allLessons[0]
         vc.questionPassed = Lessons.allLessons[0].exercises[0].question
@@ -52,9 +47,4 @@ class LessonsExercisesVC: UIViewController{
         navigationController?.pushViewController(vc, animated: true)
         print(Lessons.lessonsDone)
     }
-
-    func dashIconTouched(sender: UIBarButtonItem){
-        let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController
-        navigationController?.pushViewController(destinationViewController!, animated: true)
-    }    
 }
