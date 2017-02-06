@@ -45,21 +45,8 @@ struct LessonNotifications {
         
         return "\(lessonText): \(dateText)"
     }
-    
-    /*var trigger: UNCalendarNotificationTrigger {
-        let triggerDate = self.calendar.date(byAdding: .hour, value: LessonNotifications.triggerHourDifference, to: self.date) ?? self.date
-        let components = self.calendar.dateComponents([.year, .month, .day, .hour, .minute], from: triggerDate)
-        
-        return UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-    }*/
+
 }
 
 
 let calendar = Calendar.autoupdatingCurrent
-/*let notification = LessonNotifications(kind: .english, date: calendar.date(from: DateComponents(year: 2017, month: 12, day: 30, hour: 15, minute: 30))!)
-
-let formations: [LessonNotifications] = [
-    LessonNotifications(kind: .spanish, date: calendar.date(from: DateComponents(year: 2017, month: 12, day: 30, hour: 15, minute: 30))!),
-    LessonNotifications(kind: .english, date: calendar.date(from: DateComponents(year: 2017, month: 12, day: 30, hour: 15, minute: 30))!),
-    LessonNotifications(kind: .english, date: calendar.date(from: DateComponents(year: 2017, month: 12, day: 30, hour: 15, minute: 30))!)
-]*/

@@ -55,6 +55,7 @@ class NextDatesViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "basic")
         cell.textLabel?.text = String(describing: formations[indexPath.row].text)
+        cell.detailTextLabel?.text = "toto"
         return cell
     }
     

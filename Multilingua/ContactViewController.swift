@@ -33,8 +33,6 @@ class ContactViewController: UIViewController, UITableViewDataSource, UITableVie
         navigationItem.title = "Contacter mon Responsable"
     }
     
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

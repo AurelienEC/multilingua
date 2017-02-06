@@ -24,8 +24,9 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         logOutButton.layer.cornerRadius = 5
+        date() // pour éviter l'affichage du texte du label 1s avant
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(DashboardViewController.date), userInfo: nil, repeats: true)
-        userLabel.text = "Bonjour, " + UserDefaults.standard.string(forKey: "utilisateur")!
+        userLabel.text = "Bonjour, " + Users.getConnectedUser().username
         userLabel.textAlignment = NSTextAlignment.center
         
     }
@@ -48,13 +49,8 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func lessonsDayClic(_ sender: UIButton) {
-        
-        let defaults = UserDefaults.standard
-        let dayLessonRead = "dayLessonRead"
-        let today = Date()
-        UserDefaults.standard.set(Date(), forKey: dayLessonRead)
-        if let date = defaults.object(forKey: "dayLessonRead") as? Date, date == today{
-            if let already = defaults.object(forKey: "alreadyRead") as? Bool, already == false{
+        let connectedUser = Users.getConnectedUser()
+        if connectedUser.hasReadTodaysLesson == false{
                 UserDefaults.standard.set(true, forKey: "alreadyRead")
                 print("today + false")
                 //On récupère Main.storyboard
@@ -63,7 +59,7 @@ class DashboardViewController: UIViewController {
                 let lessons = storyboard.instantiateViewController(withIdentifier: "lessons") as! LessonsExercisesVC
                 //On montre le nouveau controller
                 navigationController?.show(lessons, sender: self)
-            }
+
         }
         else{
             let alertController = UIAlertController(title: "Désolé", message: "Revenez demain pour une nouvelle leçon", preferredStyle: .alert)

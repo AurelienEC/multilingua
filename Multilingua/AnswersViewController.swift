@@ -29,6 +29,7 @@ class AnswersViewController: UIViewController{
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true // pour bloquer le retour en arrière
         answerText.text = "Vous avez obtenu \(pointsCounter) point(s) sur \(exercisesDone) exercices effectués."
+        Users.getConnectedUser().didReadDayLesson()
     }
     @IBAction func backToDashboard(_ sender: UIButton) {
         let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController

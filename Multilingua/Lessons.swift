@@ -25,29 +25,7 @@ struct Lesson{
     let exercises:[Exercise]
     
 }
-class Lessons{
-
-
-    /* static func showLessonOfToday() -> Lesson{
-                    let date = Date()
-            let addDay:Int = 0
-            let userCalendar = Calendar.current
-            var dateComponents = DateComponents()
-            dateComponents.timeZone = TimeZone(abbreviation: "GMT")
-            var today = userCalendar.date(byAdding: .day, value: 0, to: Date())
-    
-            var dateArray:Array = [""]
-    
-            for i in stride(from: addDay, to: 366, by: 1){
-                let today = userCalendar.date(byAdding: .day, value: i, to: Date())
-    
-                dateArray.append(String(describing: today))
-                print(today as Any)
-            }
-
-    }
-       */
-    
+class Lessons{   
     static var lessonsDone = [Int]()
     static let allLessons:[Lesson] = [
         Lesson(id: 1,

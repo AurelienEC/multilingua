@@ -56,10 +56,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        if Users.login(username:username.text, password: password.text){
-            UserDefaults.standard.string(forKey: "username")
-            UserDefaults.standard.string(forKey: "password")
-            
+        if (Users.login(username:username.text, password: password.text) != nil){            
             return true
         }
         else{
