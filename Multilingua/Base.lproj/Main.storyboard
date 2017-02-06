@@ -137,7 +137,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-8o-g64">
-                                <rect key="frame" x="16" y="167" width="343" height="32"/>
+                                <rect key="frame" x="16" y="167" width="343" height="31.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-BoldItalic" family="Open Sans" pointSize="23"/>
                                 <color key="textColor" red="0.40859164110000001" green="0.4418599889" blue="0.99947565790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oz5-Z6-3dG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4352.8000000000002" y="36.431784107946029"/>
+            <point key="canvasLocation" x="3775" y="36"/>
         </scene>
         <!--Answers View Controller-->
         <scene sceneID="dbx-c2-eVS">
@@ -435,7 +435,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Résultats des Exercices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQg-Rm-XmX">
-                                <rect key="frame" x="70" y="80" width="235" height="23.5"/>
+                                <rect key="frame" x="70" y="80" width="235" height="24"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
                                 <color key="textColor" red="0.17277632940000001" green="0.29579636009999999" blue="1" alpha="0.61790988869999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -444,14 +444,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="P5V-Pv-QJm" firstAttribute="centerX" secondItem="cZb-hw-DeX" secondAttribute="centerX" id="10T-Eg-BFM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cZb-hw-DeX" secondAttribute="trailing" constant="43" id="3MP-bN-tYM"/>
-                            <constraint firstItem="cZb-hw-DeX" firstAttribute="leading" secondItem="PAD-yw-v4q" secondAttribute="leadingMargin" constant="43" id="FbB-NL-WKp"/>
+                            <constraint firstItem="cZb-hw-DeX" firstAttribute="top" secondItem="P5V-Pv-QJm" secondAttribute="bottom" constant="90" id="92O-bJ-Niy"/>
+                            <constraint firstItem="cZb-hw-DeX" firstAttribute="centerX" secondItem="NQg-Rm-XmX" secondAttribute="centerX" id="EM4-rp-YoH"/>
                             <constraint firstItem="NQg-Rm-XmX" firstAttribute="leading" secondItem="PAD-yw-v4q" secondAttribute="leadingMargin" constant="54" id="Fg8-cU-fRb"/>
-                            <constraint firstItem="8ki-dP-xEm" firstAttribute="top" secondItem="cZb-hw-DeX" secondAttribute="bottom" constant="174" id="Onk-oc-FH9"/>
+                            <constraint firstItem="8ki-dP-xEm" firstAttribute="top" secondItem="cZb-hw-DeX" secondAttribute="bottom" constant="174" id="arW-LK-tTK"/>
                             <constraint firstItem="NQg-Rm-XmX" firstAttribute="top" secondItem="L1I-bG-anc" secondAttribute="bottom" constant="60" id="frf-Hi-eJe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NQg-Rm-XmX" secondAttribute="trailing" constant="54" id="gK4-t4-qcf"/>
                             <constraint firstItem="P5V-Pv-QJm" firstAttribute="leading" secondItem="PAD-yw-v4q" secondAttribute="leadingMargin" constant="51" id="oWs-Bi-Awo"/>
-                            <constraint firstItem="cZb-hw-DeX" firstAttribute="top" secondItem="P5V-Pv-QJm" secondAttribute="bottom" constant="90" id="y1i-Q8-Dlm"/>
                         </constraints>
                     </view>
                     <connections>
@@ -461,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG5-sq-Mae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5943.1999999999998" y="36.431784107946029"/>
+            <point key="canvasLocation" x="5164" y="36"/>
         </scene>
         <!--Second ExerciseVC-->
         <scene sceneID="HgI-W2-64q">
@@ -591,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qf8-cn-F5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5208.8000000000002" y="36.431784107946029"/>
+            <point key="canvasLocation" x="4463" y="36"/>
         </scene>
         <!--Lessons ExercisesVC-->
         <scene sceneID="t68-4K-DXy">
@@ -655,7 +654,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGn-8D-rI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3623.1999999999998" y="36.431784107946029"/>
+            <point key="canvasLocation" x="3050" y="36"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="1fX-v0-RF6">

@@ -85,7 +85,7 @@ class DashboardViewController: UIViewController {
     @IBAction func logOutButtonTapped(_ sender: UIButton) {
         UserDefaults.standard.removeObject(forKey: "username")
         UserDefaults.standard.removeObject(forKey: "motDePasse")
-        UserDefaults.standard.removeObject(forKey: "dayLessonRead") // Pour supprimer la leçon lue (Test uniquement)
+        UserDefaults.standard.removeObject(forKey: "alreadyRead") // Pour supprimer la leçon lue (Test uniquement)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         //On crée une instance d'Exercice à partir du storyboard
