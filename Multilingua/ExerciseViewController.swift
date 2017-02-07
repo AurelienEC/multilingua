@@ -92,7 +92,6 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
                 for filteredAnswer in filteredAnswers{
                     filteredAnswer.isSelected = false
                 }
-                print("Index tapped is \(index)")
                 checkAnswer(answers[index])
             }
         }

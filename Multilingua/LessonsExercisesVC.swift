@@ -29,25 +29,17 @@ class LessonsExercisesVC: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-//        let allLessons = Lessons.allLessons
-//        let arrayNotDoneLessons = allLessons.filter { !Lessons.lessonsDone.contains($0.id) }
         if let lessonToShow = Lessons.arrayNotDoneLessons.first{ // Si le tableau des leçons non effectuées n'est pas vide on affiche une leçon dans l'ordre chronologique
             let title = lessonToShow.title
             let content = lessonToShow.content
             lessonTextTitle.text = title
             lessonTextContent.text = content
-            print("L'id de la leçon à montrer est : \(lessonToShow.id)")
-            print("contenu de notDoneLessons :\(Lessons.arrayNotDoneLessons.count)")
-            print("contenu de lessonsDone : \(Lessons.lessonsDone.count)")
-            
         }
         else{
             let alertController = UIAlertController(title: "Désolé", message: "Plus de leçons disponibles", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "Fermer", style: .default, handler: nil)
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
-            print("Array Empty ")
         }
     }
     
@@ -60,6 +52,5 @@ class LessonsExercisesVC: UIViewController{
         vc.questionPassed = Lessons.allLessons[randomIndex].exercises[randomExercise].question
         Lessons.lessonsDone.append((Lessons.arrayNotDoneLessons.first?.id)!) // on ajoute l'id de la leçon lue à l'array LessonsDone
         navigationController?.pushViewController(vc, animated: true)
-        print("J'ai ici appendé dans l'array LessonsDone la leçon d'id\(Lessons.arrayNotDoneLessons.first?.id)")
     }
 }

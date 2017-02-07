@@ -92,7 +92,6 @@ class SecondExerciseVC: UIViewController{
                 for filteredAnswer in filteredAnswers{
                     filteredAnswer.isSelected = false
                 }
-                print("Index tapped is \(index)")
                 checkAnswer(answers[index])
             }
         }
@@ -146,7 +145,6 @@ class SecondExerciseVC: UIViewController{
                 vc.exercisesDone = exercisesDone
                 alertController.addAction(defaultAction)
                 present(alertController, animated: true, completion: nil)
-                print(pointsCounter)
             }
             else
             {

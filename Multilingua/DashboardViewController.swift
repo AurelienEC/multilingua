@@ -66,8 +66,6 @@ class DashboardViewController: UIViewController {
             let defaultAction = UIAlertAction(title: "Retour", style: .default, handler: nil)
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
-            print ("Leçon du jour déjà lue")
-            print("voici le tableau des leçons effectuées \(UserDefaults.standard.array(forKey: "lessonsDone"))")
         }
     }
     
