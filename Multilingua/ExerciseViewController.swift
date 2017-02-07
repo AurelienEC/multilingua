@@ -93,6 +93,7 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
                     filteredAnswer.isSelected = false
                 }
                 print("Index tapped is \(index)")
+                checkAnswer(answers[index])
             }
         }
     }
@@ -100,37 +101,28 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
     @IBAction func checkAnswer(_ sender: RadioButton) {
         switch sender{
         case answer1:
-            print("Answer1 selected")
             if answerText1.text == lesson.exercises[0].expectedAnswer.value{
-                print("bonne réponse")
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
-                print("ba")
             }
         case answer2:
-            print("Answer2 Selected")
             if answerText2.text == lesson.exercises[0].expectedAnswer.value{
-                print("bonne réponse")
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
             }
         case answer3:
-            print("Answer3 Selected")
             if answerText3.text == lesson.exercises[0].expectedAnswer.value{
-                print("bonne réponse")
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
             }
         case answer4:
-            print("Answer4 Selected")
             if answerText4.text == lesson.exercises[0].expectedAnswer.value{
-                print("bonne réponse")
                 selectedAnswer = "GA"
             }
             else{
@@ -149,22 +141,21 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
                 let alertController = UIAlertController(title: "Bravo", message: "Bonne réponse", preferredStyle: .alert)
                 let vcName = "secondExerciseDay"
                 let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! SecondExerciseVC
-                vc.lesson = Lessons.allLessons[1]
-                vc.questionPassed = Lessons.allLessons[1].exercises[0].question
+                vc.lesson = Lessons.arrayNotDoneLessons.first
+                vc.questionPassed = (Lessons.arrayNotDoneLessons.first?.exercises[0].question)!
                 vc.pointsCounter = pointsCounter
                 vc.exercisesDone = exercisesDones
                 let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)})
                 alertController.addAction(defaultAction)
                 present(alertController, animated: true, completion: nil)
-                print("Compteur de point actuel à\(pointsCounter)")
             }
             else
             {
                 let alertController = UIAlertController(title: "Oups!", message: "Mauvaise réponse", preferredStyle: .alert)
                 let vcName = "secondExerciseDay"
                 let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! SecondExerciseVC
-                vc.lesson = Lessons.allLessons[1]
-                vc.questionPassed = Lessons.allLessons[1].exercises[0].question
+                vc.lesson = Lessons.arrayNotDoneLessons.first
+                vc.questionPassed = (Lessons.arrayNotDoneLessons.first?.exercises[0].question)!
                 vc.pointsCounter = pointsCounter
                 vc.exercisesDone = exercisesDones
                 let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)})

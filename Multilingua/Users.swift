@@ -10,11 +10,13 @@ import Foundation
 
 struct ConnectedUser {
     static private let lessonRead = "lessonRead"
+    static private let lessonsDone = "lessonsDone"
     
     let username:String
     
     func didReadDayLesson(){
         UserDefaults.standard.set(Date(), forKey: ConnectedUser.lessonRead)
+        UserDefaults.standard.set(Lessons.lessonsDone, forKey: ConnectedUser.lessonsDone)
     }
     
     var hasReadTodaysLesson:Bool {
@@ -49,7 +51,7 @@ class Users{
         return nil
     }
     
-    static func getConnectedUser() -> ConnectedUser{
+    static var getConnectedUser: ConnectedUser{
         return ConnectedUser(username: UserDefaults.standard.string(forKey: Keys.username) ?? "" ) // ?? "" au cas ou c'est nil c'est à droite des ??
     }
 }

@@ -87,7 +87,6 @@ class ContactViewController: UIViewController, UITableViewDataSource, UITableVie
             present(alertController, animated: true, completion: nil)
             print("Erreur car nous ne pouvons envoyer un mail via le simulateur")
         }
-        print(contactTypes[indexPath.row])
     }
     
 }

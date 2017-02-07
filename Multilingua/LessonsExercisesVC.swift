@@ -21,30 +21,45 @@ class LessonsExercisesVC: UIViewController{
     
     var lessonDone = ""
     
+    var allLessons = Lessons.lessonsDone.filter {$0 != Lessons.allLessons.count}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        goToExercise.layer.cornerRadius = 5     
-        
+        goToExercise.layer.cornerRadius = 5
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let allLessons = Lessons.allLessons
-        let randomIndex = Int(arc4random_uniform(UInt32(allLessons.count)))
-        let randomTitle = allLessons[randomIndex].title
-        let randomContent = allLessons[randomIndex].content
-        lessonTextTitle.text = randomTitle
-        lessonTextContent.text = randomContent
+        
+//        let allLessons = Lessons.allLessons
+//        let arrayNotDoneLessons = allLessons.filter { !Lessons.lessonsDone.contains($0.id) }
+        if let lessonToShow = Lessons.arrayNotDoneLessons.first{ // Si le tableau des leçons non effectuées n'est pas vide on affiche une leçon dans l'ordre chronologique
+            let title = lessonToShow.title
+            let content = lessonToShow.content
+            lessonTextTitle.text = title
+            lessonTextContent.text = content
+            print("L'id de la leçon à montrer est : \(lessonToShow.id)")
+            print("contenu de notDoneLessons :\(Lessons.arrayNotDoneLessons.count)")
+            print("contenu de lessonsDone : \(Lessons.lessonsDone.count)")
+            
+        }
+        else{
+            let alertController = UIAlertController(title: "Désolé", message: "Plus de leçons disponibles", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Fermer", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+            print("Array Empty ")
+        }
     }
     
     @IBAction func goToExercise(_ sender: UIButton) {
         
         let vcName = "exerciseDay"
-//        let randomExercise = Int(arc4random_uniform(UInt32(Lessons.allLessons[randomIndex].exercises.count))) Pour un exercice aléatoire
+        let randomExercise = Int(arc4random_uniform(UInt32(Lessons.allLessons[randomIndex].exercises.count))) //Pour un exercice aléatoire
         let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! ExerciseViewController
-        vc.lesson = Lessons.allLessons[0]
-        vc.questionPassed = Lessons.allLessons[0].exercises[0].question
-        Lessons.lessonsDone.append(Lessons.allLessons[randomIndex].id)
+        vc.lesson = Lessons.allLessons[randomIndex]
+        vc.questionPassed = Lessons.allLessons[randomIndex].exercises[randomExercise].question
+        Lessons.lessonsDone.append((Lessons.arrayNotDoneLessons.first?.id)!) // on ajoute l'id de la leçon lue à l'array LessonsDone
         navigationController?.pushViewController(vc, animated: true)
-        print(Lessons.lessonsDone)
+        print("J'ai ici appendé dans l'array LessonsDone la leçon d'id\(Lessons.arrayNotDoneLessons.first?.id)")
     }
 }

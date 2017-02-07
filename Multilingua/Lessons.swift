@@ -25,7 +25,8 @@ struct Lesson{
     let exercises:[Exercise]
     
 }
-class Lessons{   
+class Lessons{
+    static var arrayNotDoneLessons = allLessons.filter { !Lessons.lessonsDone.contains($0.id) }
     static var lessonsDone = [Int]()
     static let allLessons:[Lesson] = [
         Lesson(id: 1,
@@ -66,11 +67,40 @@ class Lessons{
             ])
         ,
         Lesson(id: 4,
-               title: "Les comparatifs", content: "Il existe 3 comparatifs : le comparatif de supériorité,  d'égalité, et enfin  d'infériorité.", exercises:[
-            Exercise(question: "Lequel de ces comparatifs n'existe pas ? Le comparatif de ...", answers: [
-                Answer(value: "supériorité"),Answer(value: "de superlativité"),Answer(value: "d'infériorité"),Answer(value: "d'égalité")
-                ], expectedAnswer: Answer(value: "de superlativité"))
+               title: "Le Past Perfect", content: "On utilise l'auxiliaire AVOIR au passé « HAD » à toutes les personnes et l'on y ajoute le participe passé du verbe concerné. (Participe passé = Base verbale + ed ou 3e colonne des verbes irréguliers à connaître par cœur) ", exercises:[
+            Exercise(question: "Quel est l'auxiliaire à utiliser pour le Past Perfect", answers: [
+                Answer(value: "BE"),Answer(value: "GET"),Answer(value: "HAVE"),Answer(value: "Aucun")
+                ], expectedAnswer: Answer(value: "HAVE"))
             ])
+        ,
+        Lesson(id: 5,
+               title: "For et le Present Perfect", content: "Le present perfect indique que l'action a commencé dans le passé et qu'elle a un lien avec le présent. For nous indique qu'elle se continue dans le présent ou qu'elle dure. ", exercises:[
+                Exercise(question: "Qu'utilise-t-on avec For ?", answers: [
+                    Answer(value: "Le Present Perfect"),Answer(value: "Le présent"),Answer(value: "Le Passé Antérieur"),Answer(value: "Le futur")
+                    ], expectedAnswer: Answer(value: "Le Present Perfect"))
+            ])
+        ,
+        Lesson(id: 6,
+               title: "Verbes Irréguliers", content: "Les verbe irréguliers disposent de conjugaisons spécifiques - Reportez vous au tableau.", exercises:[
+                Exercise(question: "Quelle est la forme correcte du preterit pour ce verbe irrégulier - Forget?", answers: [
+                    Answer(value: "Forgate"),Answer(value: "Forgotten"),Answer(value: "Forgit"),Answer(value: "Forgot")
+                    ], expectedAnswer: Answer(value: "Forgot"))
+            ])
+        ,
+        Lesson(id: 7,
+               title: "Le Ago", content: "' Ago ' est un petit mot qui sert à exprimer le temps qui s'est écoulé depuis une action passée", exercises:[
+                Exercise(question: "Ago permet d'exprimer un(e) ...", answers: [
+                    Answer(value: "temps"),Answer(value: "moment"),Answer(value: "distance"),Answer(value: "verbe")
+                    ], expectedAnswer: Answer(value: "temps"))
+            ])
+        ,
+        Lesson(id: 8,
+               title: "Emploi du prétérit", content: "Principal emploi: action passée et terminée, datée soit par le contexte, soit par l'énonciateur (celui qui parle)", exercises:[
+                Exercise(question: "Quelle type d'action désigne le préterit ? Une action ...", answers: [
+                    Answer(value: "présente"),Answer(value: "passée"),Answer(value: "future"),Answer(value: "proche")
+                    ], expectedAnswer: Answer(value: "passée"))
+            ])
+        ,
     ]
     
 }

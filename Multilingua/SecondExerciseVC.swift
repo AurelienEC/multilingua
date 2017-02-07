@@ -48,14 +48,15 @@ class SecondExerciseVC: UIViewController{
         for answerText in answerTexts { // on enable l'interaction pour le tap Gesture
             answerText.isUserInteractionEnabled = true
         }
-        let tapOne = UITapGestureRecognizer(target: self, action: #selector(ExerciseViewController.answerTapped))
+        let tapOne = UITapGestureRecognizer(target: self, action: #selector(SecondExerciseVC.answerTapped))
         answerText1.addGestureRecognizer(tapOne)
-        let tapTwo = UITapGestureRecognizer(target: self, action: #selector(ExerciseViewController.answerTapped))
+        let tapTwo = UITapGestureRecognizer(target: self, action: #selector(SecondExerciseVC.answerTapped))
         answerText2.addGestureRecognizer(tapTwo)
-        let tapThree = UITapGestureRecognizer(target: self, action: #selector(ExerciseViewController.answerTapped))
+        let tapThree = UITapGestureRecognizer(target: self, action: #selector(SecondExerciseVC.answerTapped))
         answerText3.addGestureRecognizer(tapThree)
-        let tapFour = UITapGestureRecognizer(target: self, action: #selector(ExerciseViewController.answerTapped))
+        let tapFour = UITapGestureRecognizer(target: self, action: #selector(SecondExerciseVC.answerTapped))
         answerText4.addGestureRecognizer(tapFour)
+        
         exercisesDone += 1
     }
     
@@ -92,6 +93,7 @@ class SecondExerciseVC: UIViewController{
                     filteredAnswer.isSelected = false
                 }
                 print("Index tapped is \(index)")
+                checkAnswer(answers[index])
             }
         }
     }
@@ -99,37 +101,28 @@ class SecondExerciseVC: UIViewController{
     @IBAction func checkAnswer(_ sender: RadioButton) {
         switch sender{
         case answer1:
-            print("Answer1 selected")
             if answerText1.text == lesson.exercises[0].expectedAnswer.value{
-                print("bonne réponse")
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
-                print("ba")
             }
         case answer2:
-            print("Answer2 Selected")
             if answerText2.text == lesson.exercises[0].expectedAnswer.value{
-                print("bonne réponse")
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
             }
         case answer3:
-            print("Answer3 Selected")
             if answerText3.text == lesson.exercises[0].expectedAnswer.value{
-                print("bonne réponse")
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
             }
         case answer4:
-            print("Answer4 Selected")
             if answerText4.text == lesson.exercises[0].expectedAnswer.value{
-                print("bonne réponse")
                 selectedAnswer = "GA"
             }
             else{

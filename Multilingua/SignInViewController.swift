@@ -37,8 +37,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate
         // Try to find next responder
         if let textField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField{
             textField.becomeFirstResponder()
-            print("dans le if")
-            
         }
         /*if textField === password{
             On pourrait ici definir l'action de connexion au clic sur le bouton return du clavier
@@ -46,7 +44,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate
         else {
             // Not found, so remove keyboard.
             textField.resignFirstResponder()
-            print("dans le else")
         }
         return false
     }
