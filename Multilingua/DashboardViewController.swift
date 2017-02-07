@@ -87,6 +87,7 @@ class DashboardViewController: UIViewController {
         //On crée une instance d'Exercice à partir du storyboard
         let signIn = storyboard.instantiateViewController(withIdentifier: "signin") as! SignInViewController
         //On montre le nouveau controller
+        signIn.navigationItem.hidesBackButton = true
         navigationController?.show(signIn, sender: self)
         
     }
