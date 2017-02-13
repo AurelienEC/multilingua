@@ -75,13 +75,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate
             return false
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "logInSegue"{
             
             _ = segue.destination as! UINavigationController
-//            dashboard.stringPassed = username.text!
         }
-    }
+    }*/
 }
 

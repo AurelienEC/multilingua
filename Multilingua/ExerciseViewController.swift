@@ -132,6 +132,10 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
         }
     }
     
+//    func presentAlert(title: String, message: String, actionTitles: [String]){
+//        
+//    }
+//    
     @IBAction func validateButtonTapped(_ sender: Any) {
 
         if ((selectedAnswer) != nil){
