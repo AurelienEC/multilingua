@@ -48,8 +48,22 @@ class LessonsExercisesVC: UIViewController{
         let vcName = "exerciseDay"
         let randomExercise = Int(arc4random_uniform(UInt32(Lessons.allLessons[randomIndex].exercises.count))) //Pour un exercice aléatoire
         let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! ExerciseViewController
-        vc.lesson = Lessons.allLessons[randomIndex]
-        vc.questionPassed = Lessons.allLessons[randomIndex].exercises[randomExercise].question
+        let lesson = Lessons.allLessons[randomIndex]
+//        vc.lesson = Lessons.allLessons[randomIndex]
+//        vc.questionPassed = Lessons.allLessons[randomIndex].exercises[randomExercise].question
+        vc.exercise = lesson.exercises[0]
+        vc.onNext = { success in
+            let vcName = "exerciseDay"
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: vcName) as! ExerciseViewController
+            vc.exercise = lesson.exercises[1]
+            
+            vc.onNext = { success2  in
+                let vcName = "answersVC"
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: vcName) as! AnswersViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         Lessons.lessonsDone.append((Lessons.arrayNotDoneLessons.first?.id)!) // on ajoute l'id de la leçon lue à l'array LessonsDone
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -9,12 +9,15 @@
 import UIKit
 
 class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
+
+    typealias OnNext = (Bool) -> Void
+//    var lesson:Lesson!
+    var exercise:Exercise!
+    var onNext: OnNext!
     
-    var lesson:Lesson!
+//    var questionPassed: String = ""
     
-    var questionPassed: String = ""
-    
-    var answersTextPassed:Array = [""]
+//    var answersTextPassed:Array = [""]
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -63,12 +66,12 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true // pour bloquer le retour en arrière
         validateButton.layer.cornerRadius = 5
-        self.questionLabel.text = "Question : " + questionPassed
+        self.questionLabel.text = "Question : " + exercise.question
         questionLabel.textAlignment = NSTextAlignment.center
-        self.answerText1.text = lesson.exercises[0].answers[0].value
-        self.answerText2.text = lesson.exercises[0].answers[1].value
-        self.answerText3.text = lesson.exercises[0].answers[2].value
-        self.answerText4.text = lesson.exercises[0].answers[3].value
+        self.answerText1.text = exercise.answers[0].value
+        self.answerText2.text = exercise.answers[1].value
+        self.answerText3.text = exercise.answers[2].value
+        self.answerText4.text = exercise.answers[3].value
     }
     
     override func didReceiveMemoryWarning() {
@@ -100,28 +103,28 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
     @IBAction func checkAnswer(_ sender: RadioButton) {
         switch sender{
         case answer1:
-            if answerText1.text == lesson.exercises[0].expectedAnswer.value{
+            if answerText1.text == exercise.expectedAnswer.value{
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
             }
         case answer2:
-            if answerText2.text == lesson.exercises[0].expectedAnswer.value{
+            if answerText2.text == exercise.expectedAnswer.value{
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
             }
         case answer3:
-            if answerText3.text == lesson.exercises[0].expectedAnswer.value{
+            if answerText3.text == exercise.expectedAnswer.value{
                 selectedAnswer = "GA"
             }
             else{
                 selectedAnswer = "BA"
             }
         case answer4:
-            if answerText4.text == lesson.exercises[0].expectedAnswer.value{
+            if answerText4.text == exercise.expectedAnswer.value{
                 selectedAnswer = "GA"
             }
             else{
@@ -142,13 +145,7 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate{
             if selectedAnswer == "GA"{
                 pointsCounter += 1
                 let alertController = UIAlertController(title: "Bravo", message: "Bonne réponse", preferredStyle: .alert)
-                let vcName = "secondExerciseDay"
-                let vc = storyboard?.instantiateViewController(withIdentifier: vcName) as! SecondExerciseVC
-                vc.lesson = Lessons.arrayNotDoneLessons.first
-                vc.questionPassed = (Lessons.arrayNotDoneLessons.first?.exercises[0].question)!
-                vc.pointsCounter = pointsCounter
-                vc.exercisesDone = exercisesDones
-                let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)})
+                let defaultAction = UIAlertAction(title: "Suite", style: .default, handler: { action in self.onNext(true)})
                 alertController.addAction(defaultAction)
                 present(alertController, animated: true, completion: nil)
             }
